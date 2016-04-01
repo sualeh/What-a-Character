@@ -1,3 +1,18 @@
+/*
+
+Unicode Learning
+https://github.com/sualeh/unicode-learning
+Copyright (c) 2016, Sualeh Fatehi.
+
+This library is distributed in the hope that it will be useful, but 
+WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 
+4.0 International License. To view a copy of this license, visit 
+http://creativecommons.org/licenses/by-sa/4.0/. 
+
+*/
 package us.fatehi._working;
 
 
@@ -15,7 +30,11 @@ public class ByteOutput
 
     final String string1 = "abcdef";
     final byte[] bytes1 = new byte[] {
-        1, 2, 3, 4, 5
+                                       1,
+                                       2,
+                                       3,
+                                       4,
+                                       5
     };
     final String string2 = "qrstuv";
 
