@@ -13,17 +13,22 @@ This work is licensed under the Creative Commons Attribution-ShareAlike
 http://creativecommons.org/licenses/by-sa/4.0/. 
 
 */
-package us.fatehi._working;
+package us.fatehi.whatacharacter;
 
 
-public class ConvertUnicodeNumbers
+public class UnsignedChar
 {
-  
-  public static void main(String[] args)
+
+  public static void main(final String[] args)
   {
-    final String hindiNumber = "१२३४५६७८९०";
-    final int number = Integer.parseInt(hindiNumber);
-    System.out.println(String.format("%s = %d", hindiNumber, number));
+    final short sh1 = -20;
+    final char ch1 = (char) sh1;
+    final int int1 = (int) ch1;
+    final int int2 = (int) sh1;
+    System.out.println(String.valueOf(sh1));
+    System.out.println(String.valueOf(ch1));
+    System.out.println(String.valueOf(int1));
+    System.out.println(String.valueOf(int2));
   }
-  
+
 }

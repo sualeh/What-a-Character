@@ -13,19 +13,18 @@ This work is licensed under the Creative Commons Attribution-ShareAlike
 http://creativecommons.org/licenses/by-sa/4.0/. 
 
 */
-package us.fatehi._working;
+package us.fatehi.whatacharacter;
 
-
-public class UnicodeStringLiterals
+public class UnicodeUppercase
 {
 
   public static void main(String[] args)
   {
-    String original1 = "a\u00ea\u00f1\u00fcc";
-    System.out.println(original1);
-    
-    String original2 = "A\u00EA\u00F1\u00FCC";
-    System.out.println(original2);
+    String word1 = "Straße";
+    String word2 = word1.toUpperCase();
+    System.out.println(word1.length());
+    System.out.println(word2.length());
+    System.out.println(word2);
   }
-
+  
 }

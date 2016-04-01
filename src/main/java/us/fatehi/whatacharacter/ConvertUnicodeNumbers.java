@@ -13,18 +13,17 @@ This work is licensed under the Creative Commons Attribution-ShareAlike
 http://creativecommons.org/licenses/by-sa/4.0/. 
 
 */
-package us.fatehi._working;
+package us.fatehi.whatacharacter;
 
-public class UnicodeUppercase
+
+public class ConvertUnicodeNumbers
 {
-
+  
   public static void main(String[] args)
   {
-    String word1 = "Straße";
-    String word2 = word1.toUpperCase();
-    System.out.println(word1.length());
-    System.out.println(word2.length());
-    System.out.println(word2);
+    final String hindiNumber = "१२३४५६७८९०";
+    final int number = Integer.parseInt(hindiNumber);
+    System.out.println(String.format("%s = %d", hindiNumber, number));
   }
   
 }

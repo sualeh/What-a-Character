@@ -13,22 +13,19 @@ This work is licensed under the Creative Commons Attribution-ShareAlike
 http://creativecommons.org/licenses/by-sa/4.0/. 
 
 */
-package us.fatehi._working;
+package us.fatehi.whatacharacter;
 
 
-public class UnsignedChar
+public class UnicodeStringLiterals
 {
 
-  public static void main(final String[] args)
+  public static void main(String[] args)
   {
-    final short sh1 = -20;
-    final char ch1 = (char) sh1;
-    final int int1 = (int) ch1;
-    final int int2 = (int) sh1;
-    System.out.println(String.valueOf(sh1));
-    System.out.println(String.valueOf(ch1));
-    System.out.println(String.valueOf(int1));
-    System.out.println(String.valueOf(int2));
+    String original1 = "a\u00ea\u00f1\u00fcc";
+    System.out.println(original1);
+    
+    String original2 = "A\u00EA\u00F1\u00FCC";
+    System.out.println(original2);
   }
 
 }
