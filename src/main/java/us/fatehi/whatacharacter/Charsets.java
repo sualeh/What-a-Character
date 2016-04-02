@@ -26,11 +26,14 @@ public class Charsets
 {
   public static void main(final String[] args)
   {
-    printCharsetDetails(Charset.defaultCharset());
-    System.out.println();
+    // Prints details of all character encodings available on a system
 
+    System.out.println("DEFAULT CHARSET\n");
+    printCharsetDetails(Charset.defaultCharset());
+
+    System.out.println("ALL SUPPORTED CHARSETS\n");
     final SortedMap<String, Charset> availableCharsets = Charset
-        .availableCharsets();
+      .availableCharsets();
     for (final Charset charset: availableCharsets.values())
     {
       printCharsetDetails(charset);
@@ -39,27 +42,25 @@ public class Charsets
 
   private static void printCharsetDetails(final Charset charset)
   {
+    String displayName = charset.name();
     final SortedSet<String> aliases = new TreeSet<String>(charset.aliases());
     aliases.add(charset.name());
-    final float averageBytesPerChar;
     final float maxBytesPerChar;
     if (charset.canEncode())
     {
       final CharsetEncoder encoder = charset.newEncoder();
-      averageBytesPerChar = encoder.averageBytesPerChar();
       maxBytesPerChar = encoder.maxBytesPerChar();
     }
     else
     {
-      averageBytesPerChar = 0;
       maxBytesPerChar = 0;
     }
 
-    System.out.println(String
-                       .format("%s max %d bytes, %s length",
-                               aliases,
-                               (int) maxBytesPerChar,
-                               averageBytesPerChar != maxBytesPerChar? "variable": "fixed"));
+    System.out
+      .println(String.format("charset: %s%naliases: %s%nmax %d bytes%n",
+                             displayName,
+                             aliases,
+                             (int) maxBytesPerChar));
   }
 
 }
