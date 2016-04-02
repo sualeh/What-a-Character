@@ -15,28 +15,27 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 */
 package us.fatehi.whatacharacter;
 
-
-import java.util.Arrays;
-
-public class UTF16StringLength
+public class SupplementaryCharacters
 {
 
   public static void main(final String[] args)
     throws Exception
   {
-    final int cp = 0x10400;
-    System.out.println("code point: " + cp);
-    System.out.println("code point count: " + Character.charCount(cp));
+    // Some of the Java APIs are not aware of Unicode characters outside
+    // of the Basic Multilingual Plane.
 
+    // A character outside of the Basic Multilingual Plane is
+    // represented by a surrogate pair.
+    final int cp = 0x01D4AE;
+    System.out.println(String.format("code point: %d - %s; character count: %d",
+                                     cp,
+                                     Character.getName(cp),
+                                     Character.charCount(cp)));
+
+    // String gives the length including surrogate characters, NOT the
+    // number of Unicode characters
     final String text = "text" + new StringBuffer().appendCodePoint(cp);
     System.out.println("length: " + text.length());
-    System.out.println(Arrays.toString(text.toCharArray()));
-
-    for (int i = 0; i < text.length(); i++)
-    {
-      final int codePointAt = text.codePointAt(i);
-      System.out.println(codePointAt);
-    }
 
   }
 
