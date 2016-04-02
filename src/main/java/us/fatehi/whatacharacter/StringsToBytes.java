@@ -1,7 +1,7 @@
 /*
 
-Unicode Learning
-https://github.com/sualeh/unicode-learning
+What a Character
+https://github.com/sualeh/What-a-Character
 Copyright (c) 2016, Sualeh Fatehi.
 
 This library is distributed in the hope that it will be useful, but 
