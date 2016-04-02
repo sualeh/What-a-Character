@@ -18,12 +18,15 @@ package us.fatehi.whatacharacter;
 
 public class ConvertUnicodeNumbers
 {
-  
+
   public static void main(String[] args)
   {
+    // Number parsing functions can handle numeric values from other
+    // languages
+
     final String hindiNumber = "१२३४५६७८९०";
     final int number = Integer.parseInt(hindiNumber);
     System.out.println(String.format("%s = %d", hindiNumber, number));
   }
-  
+
 }
