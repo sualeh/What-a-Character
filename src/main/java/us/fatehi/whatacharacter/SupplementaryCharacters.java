@@ -15,6 +15,7 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 */
 package us.fatehi.whatacharacter;
 
+
 public class SupplementaryCharacters
 {
 
@@ -27,16 +28,23 @@ public class SupplementaryCharacters
     // A character outside of the Basic Multilingual Plane is
     // represented by a surrogate pair.
     final int cp = 0x01D4AE;
-    System.out.println(String.format("code point: %d - %s; character count: %d",
-                                     cp,
-                                     Character.getName(cp),
-                                     Character.charCount(cp)));
+    System.out.println(String
+      .format("character: %s - code point: %d - %s; character count: %d",
+              new StringBuffer().appendCodePoint(cp),
+              cp,
+              Character.getName(cp),
+              Character.charCount(cp)));
 
     // String gives the length including surrogate characters, NOT the
     // number of Unicode characters
     final String text = "text" + new StringBuffer().appendCodePoint(cp);
     System.out.println("length: " + text.length());
 
+    // Using a StringBuffer to delete characters can cause problems,
+    // since it is not aware of Supplementary Plane characters
+    final String textDeleted = new StringBuffer(text).deleteCharAt(4)
+      .toString();
+    System.out.println(textDeleted);
   }
 
 }
