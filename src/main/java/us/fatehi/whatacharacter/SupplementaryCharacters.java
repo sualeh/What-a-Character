@@ -29,10 +29,11 @@ public class SupplementaryCharacters
     // represented by a surrogate pair.
     final int cp = 0x01D4AE;
     System.out.println(String
-      .format("character: %s - code point: %d - %s; character count: %d",
+      .format("character: %s - code point: %d - %s in %s; character count: %d",
               new StringBuffer().appendCodePoint(cp),
               cp,
               Character.getName(cp),
+              Character.UnicodeBlock.of(cp),
               Character.charCount(cp)));
 
     // String gives the length including surrogate characters, NOT the
