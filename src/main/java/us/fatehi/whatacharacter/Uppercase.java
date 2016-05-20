@@ -25,13 +25,24 @@ public class Uppercase
     // one character. Also, depending on the position of a character in
     // a word, you can get a different uppercase or lowercase character.
 
-    final String word1 = "Straße";
-    final String word2 = word1.toUpperCase();
+    final String germanWord = "straße";
+    final String germanUpper = germanWord.toUpperCase();
+    final String germanLower = germanUpper.toLowerCase();
 
     System.out
-      .println(String.format("\"%s\" - length %d", word1, word1.length()));
+      .println(String.format("German \"street\" - \"%s\" - length %d", germanWord, germanWord.length()));
     System.out
-      .println(String.format("\"%s\" - length %d", word2, word2.length()));
+      .println(String.format("German \"street\" in uppercase - \"%s\" - length %d", germanUpper, germanUpper.length()));
+    System.out
+    .println(String.format("German \"street\" in lowercase - \"%s\" - length %d", germanLower, germanLower.length()));
+
+    final String greekWord = "σκύλος";
+    final String greekUpper = greekWord.toUpperCase();
+    final String greekLower = greekUpper.toLowerCase();
+
+    System.out.println(String.format("Greek \"dog\" in uppercase - \"%s\"", greekUpper));
+    System.out.println(String.format("Greek \"dog\" in lowercase - \"%s\"", greekLower));
+
   }
 
 }

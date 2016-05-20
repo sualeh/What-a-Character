@@ -44,7 +44,6 @@ public class Charsets
   {
     String displayName = charset.name();
     final SortedSet<String> aliases = new TreeSet<String>(charset.aliases());
-    aliases.add(charset.name());
     final float maxBytesPerChar;
     if (charset.canEncode())
     {
@@ -59,7 +58,7 @@ public class Charsets
     System.out
       .println(String.format("charset: %s%naliases: %s%nmax %d bytes%n",
                              displayName,
-                             aliases,
+                             String.join(", ", aliases),
                              (int) maxBytesPerChar));
   }
 
