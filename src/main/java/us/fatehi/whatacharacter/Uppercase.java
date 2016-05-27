@@ -21,6 +21,7 @@ public class Uppercase
 
   public static void main(final String[] args)
   {
+
     // Uppercasing or lowercasing a character may result in more than
     // one character. Also, depending on the position of a character in
     // a word, you can get a different uppercase or lowercase character.
@@ -29,20 +30,29 @@ public class Uppercase
     final String germanUpper = germanWord.toUpperCase();
     final String germanLower = germanUpper.toLowerCase();
 
-    System.out
-      .println(String.format("German \"street\" - \"%s\" - length %d", germanWord, germanWord.length()));
-    System.out
-      .println(String.format("German \"street\" in uppercase - \"%s\" - length %d", germanUpper, germanUpper.length()));
-    System.out
-    .println(String.format("German \"street\" in lowercase - \"%s\" - length %d", germanLower, germanLower.length()));
+    System.out.format("German \"street\" - \"%s\" - length %d%n",
+                      germanWord,
+                      germanWord.length());
+    System.out.format("German \"street\" in uppercase - \"%s\" - length %d%n",
+                      germanUpper,
+                      germanUpper.length());
+    System.out.format("German \"street\" in lowercase - \"%s\" - length %d",
+                      germanLower,
+                      germanLower.length());
 
     final String greekWord = "σκύλος";
     final String greekUpper = greekWord.toUpperCase();
     final String greekLower = greekUpper.toLowerCase();
 
-    System.out.println(String.format("Greek \"dog\" in uppercase - \"%s\"", greekUpper));
-    System.out.println(String.format("Greek \"dog\" in lowercase - \"%s\"", greekLower));
+    System.out.format("Greek \"dog\" in uppercase - \"%s\"%n", greekUpper);
+    System.out.format("Greek \"dog\" in lowercase - \"%s\"%n", greekLower);
 
+    // Character conversions may not be done correctly
+    
+    final char germanChar = 'ß';
+    final char germanCharUpper = Character.toUpperCase(germanChar);
+    System.out.format("%s becomes %s in uppercase%n", germanChar, germanCharUpper);
+    
   }
 
 }
