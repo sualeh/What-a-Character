@@ -15,6 +15,7 @@ public class PropertiesFiles
 
     System.out.println(properties.get("property1"));
     System.out.println(properties.get("property2"));
+    System.out.println(properties.get("property编"));
   }
 
 }
