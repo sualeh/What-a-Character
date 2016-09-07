@@ -6,10 +6,10 @@ Code snippets for testing and understanding Java support for Unicode. Goes with 
 
 ## References
 
-## Unicode
+### Unicode
 - [An Introduction to Writing Systems & Unicode](https://r12a.github.io/scripts/tutorial/)
 - [Encoding converter](https://r12a.github.io/apps/encodings/)
 
-## Java Support
+### Java Support
 - [Supplementary Characters in the Java Platform](http://www.oracle.com/us/technologies/java/supplementary-142654.html)
 - [Supported Encodings](https://docs.oracle.com/javase/8/docs/technotes/guides/intl/encoding.doc.html)
