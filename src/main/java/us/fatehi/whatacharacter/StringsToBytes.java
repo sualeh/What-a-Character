@@ -30,7 +30,7 @@ public class StringsToBytes
 
     // When converting from strings to bytes and back, always specify an
     // encoding explicitly. Use the same encoding system to decode, or
-    // you will get garbage back, or perhaps an ecoding exception.
+    // you will get garbage back, or perhaps an encoding exception.
 
     final Charset UTF8 = StandardCharsets.UTF_8;
     final Charset UTF16 = StandardCharsets.UTF_16BE;
