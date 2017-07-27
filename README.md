@@ -2,7 +2,7 @@
 
 # What a Character
 
-Code snippets for testing and understanding Java support for Unicode. 
+Code snippets for testing and understanding Java support for Unicode. For additional code, please see [utf8db2](https://github.com/sualeh/utf8db2). 
 
 ## Slides
 
