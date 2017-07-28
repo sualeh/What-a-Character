@@ -26,10 +26,17 @@ public class MatchUnicodeCaseInsensitive
     // Demonstrates how to use regular expressions that can match
     // Unicode case-insensitive
 
-    final Pattern pattern = Pattern
+    final Pattern patternGreek = Pattern
       .compile("σκύλος", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-    System.out.println(String.format("Unicode case-insensitive match = %s",
-                                     pattern.matcher("ΣΚΎΛΟΣ").matches()));
+    System.out.println(String
+      .format("Unicode case-insensitive match for Greek word = %s",
+              patternGreek.matcher("ΣΚΎΛΟΣ").matches()));
+
+    final Pattern patternGerman = Pattern
+      .compile("straße", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+    System.out.println(String
+      .format("Unicode case-insensitive match for German word = %s",
+              patternGerman.matcher("STRASSE").matches()));
   }
 
 }
