@@ -5,6 +5,10 @@ build/
 # Maven
 target/
 
+# Idea
+.idea/
+out/
+
 # Eclipse
 .settings/
 .project
