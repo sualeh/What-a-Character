@@ -34,15 +34,10 @@ public class Charsets
   public static void main(final String[] args)
   {
 
-    final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
     // Prints details of all character encodings available on a system
 
-    System.out.println("DEFAULT CHARSET\n");
-    final CharsetDetails defaultCharsetDetails = new CharsetDetails(Charset
-                                                                      .defaultCharset());
-    System.out.println(gson.toJson(defaultCharsetDetails));
-    System.out.println("\n");
+    System.out
+      .printf("DEFAULT CHARSET: %s%n%n", Charset.defaultCharset().name());
 
     System.out.println("ALL SUPPORTED CHARSETS\n");
     final SortedMap<String, Charset> availableCharsets = Charset
@@ -53,6 +48,7 @@ public class Charsets
       charsetDetails.add(new CharsetDetails(charset));
     }
 
+    final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     System.out.println(gson.toJson(charsetDetails));
   }
 

@@ -24,36 +24,16 @@ import java.util.Locale;
  * See https://github.com/lyndseypadget/java-strings-article
  */
 public class CloseEnoughComparator
-  implements Comparator<String>
 {
-
-  public int compare(final String obj1, final String obj2)
-  {
-    if (obj1 == null)
-    {
-      return -1;
-    }
-    if (obj2 == null)
-    {
-      return 1;
-    }
-    if (obj1.equals(obj2))
-    {
-      return 0;
-    }
-
-    final Collator usCollator = Collator.getInstance(Locale.US);
-    usCollator.setStrength(Collator.PRIMARY);
-    return usCollator.compare(obj1, obj2);
-  }
 
   public static void main(String[] args)
   {
     final String s1 = "bleu fonce";
     final String s2 = "Bleu foncé    ";
 
-    final Comparator<String> comparator = new CloseEnoughComparator();
-    final int comparison = comparator.compare(s1, s2);
+    final Collator usCollator = Collator.getInstance(Locale.US);
+    usCollator.setStrength(Collator.PRIMARY);
+    final int comparison = usCollator.compare(s1, s2);
 
     System.out.printf("\"%s\" and \"%s\" compares to %d", s1, s2, comparison);
   }
