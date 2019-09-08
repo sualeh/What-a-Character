@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/sualeh/What-a-Character.svg?branch=master)](https://travis-ci.org/sualeh/What-a-Character)
-
 # What a Character
 
 Explains Unicode and character encoding to software engineers, and the pitfalls of working with international characters in Java.
