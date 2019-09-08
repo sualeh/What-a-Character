@@ -1,16 +1,10 @@
-# Gradle
-.gradle/
-build/
-
-# Maven
-target/
-
-# Idea
-.idea/
-out/
-
-# Eclipse
-.settings/
-.project
+*.iml
+*.launch
 .classpath
-/bin/
+.gradle/
+.idea/
+.project
+.settings/
+build/
+out/
+target/

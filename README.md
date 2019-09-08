@@ -6,7 +6,7 @@ Explains Unicode and character encoding to software engineers, and the pitfalls 
 
 ## Slides
 
-Goes with the [ What a Character](https://docs.google.com/presentation/d/17NQzfRJuebKGc7Bz3C3-qTGAtI88r4gmLYiSWmVyXcU/pub?start=false&loop=false) presentation slides.
+Goes with the [What a Character](https://docs.google.com/presentation/d/17NQzfRJuebKGc7Bz3C3-qTGAtI88r4gmLYiSWmVyXcU/pub?start=false&loop=false) presentation slides.
 
 ## Code
 

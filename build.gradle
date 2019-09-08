@@ -1,3 +1,24 @@
-apply plugin: 'java'
+plugins {
+  id 'java'
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+  testCompile 'org.hamcrest:hamcrest:2.1'
+}
 
 compileJava.options.encoding = 'UTF-8'
+
+test {
+  useJUnitPlatform()
+}
+
+group = 'us.fatehi'
+version = '1.0.1'
+description = 'What a Character'
+sourceCompatibility = '1.8'
