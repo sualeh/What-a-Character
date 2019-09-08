@@ -25,9 +25,9 @@ Code snippets for testing and understanding Java support for Unicode. For additi
 
 ### XKCD
 
-![RTL](http://imgs.xkcd.com/comics/rtl.png "RTL")
+| ![RTL](http://imgs.xkcd.com/comics/rtl.png "RTL") | ![Encoding](http://imgs.xkcd.com/comics/encoding.png "Encoding") |
 
 ![Unicode](http://imgs.xkcd.com/comics/unicode.png "Unicode")
 
-![Encoding](http://imgs.xkcd.com/comics/encoding.png "Encoding")
+
 
