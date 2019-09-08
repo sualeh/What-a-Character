@@ -18,48 +18,81 @@ package us.fatehi.whatacharacter;
 
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
-import java.util.SortedMap;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+/**
+ * Prints details of all charsets (technically, encoding schemes) supported on the
+ * currently running JRE. The details are printed in JSON, so the output can be
+ * imported somewhere else.
+ */
 public class Charsets
 {
+
   public static void main(final String[] args)
   {
+
+    final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
     // Prints details of all character encodings available on a system
 
     System.out.println("DEFAULT CHARSET\n");
-    printCharsetDetails(Charset.defaultCharset());
+    final CharsetDetails defaultCharsetDetails = new CharsetDetails(Charset
+                                                                      .defaultCharset());
+    System.out.println(gson.toJson(defaultCharsetDetails));
+    System.out.println("\n");
 
     System.out.println("ALL SUPPORTED CHARSETS\n");
     final SortedMap<String, Charset> availableCharsets = Charset
       .availableCharsets();
-    for (final Charset charset: availableCharsets.values())
+    final List<CharsetDetails> charsetDetails = new ArrayList<>();
+    for (final Charset charset : availableCharsets.values())
     {
-      printCharsetDetails(charset);
+      charsetDetails.add(new CharsetDetails(charset));
     }
+
+    System.out.println(gson.toJson(charsetDetails));
   }
 
-  private static void printCharsetDetails(final Charset charset)
+  private static class CharsetDetails
   {
-    String displayName = charset.name();
-    final SortedSet<String> aliases = new TreeSet<String>(charset.aliases());
-    final float maxBytesPerChar;
-    if (charset.canEncode())
+
+    private final String charset;
+    private final SortedSet<String> aliases;
+    private final float maxBytesPerChar;
+
+    CharsetDetails(final Charset charset)
     {
-      final CharsetEncoder encoder = charset.newEncoder();
-      maxBytesPerChar = encoder.maxBytesPerChar();
-    }
-    else
-    {
-      maxBytesPerChar = 0;
+      this.charset = charset.name();
+      aliases = new TreeSet<>(charset.aliases());
+      if (charset.canEncode())
+      {
+        final CharsetEncoder encoder = charset.newEncoder();
+        maxBytesPerChar = encoder.maxBytesPerChar();
+      }
+      else
+      {
+        maxBytesPerChar = 0;
+      }
     }
 
-    System.out
-      .println(String.format("charset: %s%naliases: %s%nmax %d bytes%n",
-                             displayName,
-                             String.join(", ", aliases),
-                             (int) maxBytesPerChar));
+    public String getCharset()
+    {
+      return charset;
+    }
+
+    public SortedSet<String> getAliases()
+    {
+      return aliases;
+    }
+
+    public float getMaxBytesPerChar()
+    {
+      return maxBytesPerChar;
+    }
+
   }
 
 }

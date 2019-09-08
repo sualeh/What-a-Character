@@ -8,6 +8,7 @@ repositories {
 }
 
 dependencies {
+  implementation 'com.google.code.gson:gson:2.8.5'
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
   testCompile 'org.hamcrest:hamcrest:2.1'
 }
