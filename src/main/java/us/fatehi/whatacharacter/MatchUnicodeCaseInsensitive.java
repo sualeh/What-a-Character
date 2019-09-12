@@ -23,20 +23,32 @@ public class MatchUnicodeCaseInsensitive
 
   public static void main(String[] args)
   {
+
     // Demonstrates how to use regular expressions that can match
-    // Unicode case-insensitive
+    // Unicode characters in a case-insensitive fashion
 
+    final String lowerGreek = "σκύλος";
+    final String upperGreek = "ΣΚΎΛΟΣ";
     final Pattern patternGreek = Pattern
-      .compile("σκύλος", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-    System.out.println(String
-      .format("Unicode case-insensitive match for Greek word = %s",
-              patternGreek.matcher("ΣΚΎΛΟΣ").matches()));
+      .compile(lowerGreek, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+    System.out.println(String.format(
+      "Unicode case-insensitive match for Greek words %s = %s is %s",
+      lowerGreek,
+      upperGreek,
+      patternGreek.matcher(upperGreek).matches()));
 
+    // When a lower -case character results in more than one uppercase character,
+    // there is no match
+    final String lowerGerman = "straße";
+    final String upperGerman = "STRASSE";
     final Pattern patternGerman = Pattern
-      .compile("straße", Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-    System.out.println(String
-      .format("Unicode case-insensitive match for German word = %s",
-              patternGerman.matcher("STRASSE").matches()));
+      .compile(lowerGerman, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+    System.out.println(String.format(
+      "Unicode case-insensitive match for German word %s = %s is %s",
+      lowerGerman,
+      upperGerman,
+      patternGerman.matcher(upperGerman).matches()));
+
   }
 
 }

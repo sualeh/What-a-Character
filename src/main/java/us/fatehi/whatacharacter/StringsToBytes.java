@@ -25,7 +25,6 @@ public class StringsToBytes
 {
 
   public static void main(String[] args)
-    throws IOException
   {
 
     // When converting from strings to bytes and back, always specify an
@@ -49,10 +48,10 @@ public class StringsToBytes
     final String string2 = new String(utf8bytes, UTF16);
     final String string3 = new String(utf16bytes, UTF8);
 
-    System.out.println("UTF-8 encoded bytes read in with UTF-16 decoding: \""
-                       + string2 + "\"");
-    System.out.println("UTF-16 encoded bytes read in with UTF-8 decoding: \""
-                       + string3 + "\"");
+    System.out.println(
+      "UTF-8 encoded bytes read in with UTF-16 decoding: \"" + string2 + "\"");
+    System.out.println(
+      "UTF-16 encoded bytes read in with UTF-8 decoding: \"" + string3 + "\"");
   }
 
 }

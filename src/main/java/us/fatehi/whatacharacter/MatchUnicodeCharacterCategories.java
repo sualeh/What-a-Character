@@ -23,17 +23,26 @@ public class MatchUnicodeCharacterCategories
 
   public static void main(String[] args)
   {
+
     // Demonstrates how to use regular expressions that can match
     // Unicode character categories
 
     final Pattern digit = Pattern.compile("[0-9]*");
     final Pattern unicode_digit = Pattern.compile("\\p{Nd}*");
+
     final String hindiNumber = "१२३४५६७८९०";
-    System.out.println(String.format("digit match = %s",
-                                     digit.matcher(hindiNumber).matches()));
-    System.out
-      .println(String.format("Unicode digit match = %s",
-                             unicode_digit.matcher(hindiNumber).matches()));
+
+    System.out.println(String.format(
+      "Plain digit match for %s using pattern %s is %s",
+      hindiNumber,
+      digit.pattern(),
+      digit.matcher(hindiNumber).matches()));
+
+    System.out.println(String.format(
+      "Unicode digit match for %s using pattern %s is %s",
+      hindiNumber,
+      unicode_digit.pattern(),
+      unicode_digit.matcher(hindiNumber).matches()));
   }
 
 }

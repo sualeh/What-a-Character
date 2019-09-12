@@ -23,8 +23,9 @@ public class Uppercase
   {
 
     // Uppercasing or lowercasing a character may result in more than
-    // one character. Also, depending on the position of a character in
-    // a word, you can get a different uppercase or lowercase character.
+    // one character
+    // Also, depending on the position of a character in
+    // a word, you can get a different uppercase or lowercase character
 
     final String germanWord = "straße";
     final String germanUpper = germanWord.toUpperCase();
@@ -60,9 +61,8 @@ public class Uppercase
 
     final char germanChar = 'ß';
     final char germanCharUpper = Character.toUpperCase(germanChar);
-    System.out.format("%s becomes %s in uppercase%n",
-                      germanChar,
-                      germanCharUpper);
+    System.out
+      .format("%s becomes %s in uppercase%n", germanChar, germanCharUpper);
 
   }
 

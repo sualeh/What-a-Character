@@ -17,17 +17,17 @@ package us.fatehi.whatacharacter;
 
 
 import java.text.Collator;
-import java.util.Comparator;
 import java.util.Locale;
 
-/**
- * See https://github.com/lyndseypadget/java-strings-article
- */
 public class CloseEnoughComparator
 {
 
   public static void main(String[] args)
   {
+    // Demonstrates Unicode collation algorithms implemented in Java, which allow
+    // comparison of strings for similarity, with different levels of accuracy
+    // See https://github.com/lyndseypadget/java-strings-article
+
     final String s1 = "bleu fonce";
     final String s2 = "Bleu foncé    ";
 

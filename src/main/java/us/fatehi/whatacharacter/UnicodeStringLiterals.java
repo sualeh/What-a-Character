@@ -21,9 +21,9 @@ public class UnicodeStringLiterals
 
   public static void main(String[] args)
   {
-    // How to use Unicode characters in string and character literals.
-    // The hexadecimal values can be in uppercase or lowercase. The
-    // characters are always in the Basic Multilingual Plane.
+    // How to use Unicode characters in string and character literals
+    // The hexadecimal values can be in uppercase or lowercase
+    // The characters are always in the Basic Multilingual Plane
 
     char char1 = 'a';
     System.out.println(char1);

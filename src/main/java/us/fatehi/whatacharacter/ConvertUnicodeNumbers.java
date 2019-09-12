@@ -16,18 +16,19 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 package us.fatehi.whatacharacter;
 
 
-/**
- * Demonstrates Java number parsing functions can handle numeric values from
- * other (non-English) languages
- */
 public class ConvertUnicodeNumbers
 {
 
   public static void main(String[] args)
   {
+
+    // Demonstrates Java number parsing functions can handle numeric values from
+    // other (non-English) languages
+
     final String hindiNumber = "१२३४५६७८९०";
     final int number = Integer.parseInt(hindiNumber);
     System.out.printf("%s = %d", hindiNumber, number);
+
   }
 
 }

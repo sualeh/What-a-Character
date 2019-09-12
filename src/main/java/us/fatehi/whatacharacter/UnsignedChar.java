@@ -21,23 +21,20 @@ public class UnsignedChar
 
   public static void main(final String[] args)
   {
-    // Demonstrates that a character is an unsigned data type. A short
-    // and a char are both 16 bits. A short can hold negative values,
-    // but a char cannot. You can prove this by assigning both to an int
-    // value.
+    // Demonstrates that a character is an unsigned data type
+    // A short and a char are both 16 bits
+    // However, a short can hold negative values, but a char cannot
+    // You can prove this by assigning both to an int value
 
-    final int int0 = -20;
-    final short sh1 = (short) int0;
-    final char ch1 = (char) int0;
-    final int int1 = (int) sh1;
-    final int int2 = (int) ch1;
+    final short sh1 = (short) -20;
+    final char ch1 = (char) -20;
 
-    System.out.println(String.format("short: %s converted to int: %d",
+    System.out.println(String.format("short %s converted to int is %d",
                                      String.valueOf(sh1),
-                                     int1));
-    System.out.println(String.format("char: %s converted to int: %d",
+                                     (int) sh1));
+    System.out.println(String.format("char %s converted to int is %d",
                                      String.valueOf(ch1),
-                                     int2));
+                                     (int) ch1));
   }
 
 }
