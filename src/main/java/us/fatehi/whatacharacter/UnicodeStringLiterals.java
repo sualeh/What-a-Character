@@ -54,14 +54,14 @@ public class UnicodeStringLiterals
     printUnicode('\\');
   }
 
-  private static String toUnicode(char ch)
-  {
-    return String.format("\\u%04x", (int) ch);
-  }
-
   private static void printUnicode(char ch)
   {
     System.out.println(toUnicode(ch));
+  }
+
+  private static String toUnicode(char ch)
+  {
+    return String.format("\\u%04x", (int) ch);
   }
 
 }

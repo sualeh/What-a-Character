@@ -18,15 +18,19 @@ package us.fatehi.whatacharacter;
 
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.SortedMap;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 /**
- * Prints details of all charsets (technically, encoding schemes) supported on the
- * currently running JRE. The details are printed in JSON, so the output can be
- * imported somewhere else.
+ * Prints details of all charsets (technically, encoding schemes) supported on
+ * the currently running JRE. The details are printed in JSON, so the output can
+ * be imported somewhere else.
  */
 public class Charsets
 {
@@ -36,19 +40,23 @@ public class Charsets
 
     // Prints details of all character encodings available on a system
 
-    System.out
-      .printf("DEFAULT CHARSET: %s%n%n", Charset.defaultCharset().name());
+    System.out.printf("DEFAULT CHARSET: %s%n%n",
+                      Charset
+                        .defaultCharset()
+                        .name());
 
     System.out.println("ALL SUPPORTED CHARSETS\n");
-    final SortedMap<String, Charset> availableCharsets = Charset
-      .availableCharsets();
+    final SortedMap<String, Charset> availableCharsets =
+      Charset.availableCharsets();
     final List<CharsetDetails> charsetDetails = new ArrayList<>();
     for (final Charset charset : availableCharsets.values())
     {
       charsetDetails.add(new CharsetDetails(charset));
     }
 
-    final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    final Gson gson = new GsonBuilder()
+      .setPrettyPrinting()
+      .create();
     System.out.println(gson.toJson(charsetDetails));
   }
 

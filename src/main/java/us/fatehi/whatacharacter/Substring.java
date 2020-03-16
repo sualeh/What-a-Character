@@ -1,8 +1,6 @@
 package us.fatehi.whatacharacter;
 
 
-import java.io.UnsupportedEncodingException;
-
 public class Substring
 {
 
@@ -14,16 +12,22 @@ public class Substring
     // A character outside of the Basic Multilingual Plane is
     // represented by a surrogate pair.
 
-    final int cp = 0x01D4AE;
-    final String cpchar = new StringBuffer().appendCodePoint(cp).toString();
+    final int cp = 0x010400; // 'DESERET CAPITAL LETTER LONG I' 𐐀
+    final String cpchar = new StringBuffer()
+      .appendCodePoint(cp)
+      .toString();
 
-    System.out.println(String.format(
-      "character: %s - code point: %d - %s in %s; character count: %d",
+    System.out.printf(
+      "character: %s - code point: %d - '%s' in Unicode block '%s'; character count: %d%n",
       cpchar,
       cp,
       Character.getName(cp),
       Character.UnicodeBlock.of(cp),
-      Character.charCount(cp)));
+      Character.charCount(cp));
+    final char[] surrogatePair = Character.toChars(cp);
+    System.out.printf("surrogate pair: U+%02x + U+%02x%n",
+                      (int) surrogatePair[0],
+                      (int) surrogatePair[1]);
 
     // String gives the length including surrogate characters, NOT the
     // number of Unicode characters

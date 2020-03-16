@@ -27,7 +27,7 @@ public class ConvertUnicodeNumbers
 
     final String hindiNumber = "१२३४५६७८९०";
     final int number = Integer.parseInt(hindiNumber);
-    System.out.printf("%s = %d", hindiNumber, number);
+    System.out.printf("%s = %d%n", hindiNumber, number);
 
   }
 

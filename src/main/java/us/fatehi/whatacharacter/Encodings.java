@@ -48,38 +48,45 @@ public class Encodings
 
   private static void printCodePoints(final String text)
   {
-    text.codePoints().forEach(cp -> System.out
-      .print(new String(new int[] { cp }, 0, 1) + " - "));
-    System.out.println();
-  }
-
-  private static void printEncoding(final String text, final Charset charset)
-  {
-    text.codePoints().forEach(cp -> {
-      final String s = new String(new int[] { cp }, 0, 1);
-      final byte[] bytes = s.getBytes(charset);
-      for (byte enc : bytes)
-      {
-        System.out.printf("%02x ", enc);
-      }
-      System.out.print(" - ");
-    });
+    text
+      .codePoints()
+      .forEach(cp -> System.out.print(
+        new String(new int[] { cp }, 0, 1) + " - "));
     System.out.println();
   }
 
   private static void printEncodedBits(final String text, final Charset charset)
   {
-    text.codePoints().forEach(cp -> {
-      final String s = new String(new int[] { cp }, 0, 1);
-      final byte[] bytes = s.getBytes(charset);
-      for (byte enc : bytes)
-      {
-        final String bits = String
-          .format("%8s", Integer.toBinaryString(enc & 0xFF)).replace(' ', '0');
-        System.out.print(bits + " ");
-      }
-      System.out.print(" - ");
-    });
+    text
+      .codePoints()
+      .forEach(cp -> {
+        final String s = new String(new int[] { cp }, 0, 1);
+        final byte[] bytes = s.getBytes(charset);
+        for (byte enc : bytes)
+        {
+          final String bits = String
+            .format("%8s", Integer.toBinaryString(enc & 0xFF))
+            .replace(' ', '0');
+          System.out.print(bits + " ");
+        }
+        System.out.print(" - ");
+      });
+    System.out.println();
+  }
+
+  private static void printEncoding(final String text, final Charset charset)
+  {
+    text
+      .codePoints()
+      .forEach(cp -> {
+        final String s = new String(new int[] { cp }, 0, 1);
+        final byte[] bytes = s.getBytes(charset);
+        for (byte enc : bytes)
+        {
+          System.out.printf("%02x ", enc);
+        }
+        System.out.print(" - ");
+      });
     System.out.println();
   }
 

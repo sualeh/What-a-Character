@@ -29,25 +29,31 @@ public class MatchUnicodeCaseInsensitive
 
     final String lowerGreek = "σκύλος";
     final String upperGreek = "ΣΚΎΛΟΣ";
-    final Pattern patternGreek = Pattern
-      .compile(lowerGreek, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-    System.out.println(String.format(
-      "Unicode case-insensitive match for Greek words %s = %s is %s",
+    final Pattern patternGreek = Pattern.compile(lowerGreek,
+                                                 Pattern.CASE_INSENSITIVE
+                                                 | Pattern.UNICODE_CASE);
+    System.out.printf(
+      "Unicode case-insensitive match for Greek words %s = %s is %s%n",
       lowerGreek,
       upperGreek,
-      patternGreek.matcher(upperGreek).matches()));
+      patternGreek
+        .matcher(upperGreek)
+        .matches());
 
     // When a lower -case character results in more than one uppercase character,
     // there is no match
     final String lowerGerman = "straße";
     final String upperGerman = "STRASSE";
-    final Pattern patternGerman = Pattern
-      .compile(lowerGerman, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-    System.out.println(String.format(
+    final Pattern patternGerman = Pattern.compile(lowerGerman,
+                                                  Pattern.CASE_INSENSITIVE
+                                                  | Pattern.UNICODE_CASE);
+    System.out.printf(
       "Unicode case-insensitive match for German word %s = %s is %s",
       lowerGerman,
       upperGerman,
-      patternGerman.matcher(upperGerman).matches()));
+      patternGerman
+        .matcher(upperGerman)
+        .matches());
 
   }
 

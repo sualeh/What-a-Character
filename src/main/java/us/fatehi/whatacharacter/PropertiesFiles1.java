@@ -13,8 +13,8 @@ public class PropertiesFiles1
     throws Exception
   {
     Properties properties = new Properties();
-    InputStream stream = PropertiesFiles1.class
-      .getResourceAsStream("properties1.properties");
+    InputStream stream =
+      PropertiesFiles1.class.getResourceAsStream("/properties1.properties");
     properties.load(new InputStreamReader(stream, StandardCharsets.UTF_8));
 
     System.out.println(properties.get("property1"));

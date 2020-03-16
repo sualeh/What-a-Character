@@ -75,8 +75,9 @@ public class Uppercase
 
     final char germanChar = 'ß';
     final char germanCharUpper = Character.toUpperCase(germanChar);
-    System.out
-      .format("%s becomes %s in uppercase%n", germanChar, germanCharUpper);
+    System.out.format("%s becomes %s in uppercase%n",
+                      germanChar,
+                      germanCharUpper);
 
   }
 

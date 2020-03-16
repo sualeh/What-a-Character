@@ -32,17 +32,19 @@ public class MatchUnicodeCharacterCategories
 
     final String hindiNumber = "१२३४५६७८९०";
 
-    System.out.println(String.format(
-      "Plain digit match for %s using pattern %s is %s",
-      hindiNumber,
-      digit.pattern(),
-      digit.matcher(hindiNumber).matches()));
+    System.out.printf("Plain digit match for %s using pattern %s is %s%n",
+                      hindiNumber,
+                      digit.pattern(),
+                      digit
+                        .matcher(hindiNumber)
+                        .matches());
 
-    System.out.println(String.format(
-      "Unicode digit match for %s using pattern %s is %s",
-      hindiNumber,
-      unicode_digit.pattern(),
-      unicode_digit.matcher(hindiNumber).matches()));
+    System.out.printf("Unicode digit match for %s using pattern %s is %s%n",
+                      hindiNumber,
+                      unicode_digit.pattern(),
+                      unicode_digit
+                        .matcher(hindiNumber)
+                        .matches());
   }
 
 }

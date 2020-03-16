@@ -16,7 +16,6 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 package us.fatehi.whatacharacter;
 
 
-import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -40,10 +39,10 @@ public class StringsToBytes
     final byte[] utf8bytes = string1.getBytes(UTF8);
     final byte[] utf16bytes = string1.getBytes(UTF16);
 
-    System.out
-      .println("String encoded as UTF-8:  " + Arrays.toString(utf8bytes));
-    System.out
-      .println("String encoded as UTF-16: " + Arrays.toString(utf16bytes));
+    System.out.println(
+      "String encoded as UTF-8:  " + Arrays.toString(utf8bytes));
+    System.out.println(
+      "String encoded as UTF-16: " + Arrays.toString(utf16bytes));
 
     final String string2 = new String(utf8bytes, UTF16);
     final String string3 = new String(utf16bytes, UTF8);

@@ -29,12 +29,12 @@ public class UnsignedChar
     final short sh1 = (short) -20;
     final char ch1 = (char) -20;
 
-    System.out.println(String.format("short %s converted to int is %d",
-                                     String.valueOf(sh1),
-                                     (int) sh1));
-    System.out.println(String.format("char %s converted to int is %d",
-                                     String.valueOf(ch1),
-                                     (int) ch1));
+    System.out.printf("short %s converted to int is %d%n",
+                      String.valueOf(sh1),
+                      (int) sh1);
+    System.out.printf("char %s converted to int is %d%n",
+                      String.valueOf(ch1),
+                      (int) ch1);
   }
 
 }

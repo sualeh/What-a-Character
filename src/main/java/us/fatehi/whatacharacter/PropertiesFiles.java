@@ -10,8 +10,8 @@ public class PropertiesFiles
     throws Exception
   {
     Properties properties = new Properties();
-    properties
-      .load(PropertiesFiles.class.getResourceAsStream("properties.properties"));
+    properties.load(PropertiesFiles.class.getResourceAsStream(
+      "/properties.properties"));
 
     System.out.println(properties.get("property1"));
     System.out.println(properties.get("property2"));

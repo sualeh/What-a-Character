@@ -35,7 +35,7 @@ public class CloseEnoughComparator
     usCollator.setStrength(Collator.PRIMARY);
     final int comparison = usCollator.compare(s1, s2);
 
-    System.out.printf("\"%s\" and \"%s\" compares to %d", s1, s2, comparison);
+    System.out.printf("\"%s\" and \"%s\" compares to %d%n", s1, s2, comparison);
   }
 
 }
