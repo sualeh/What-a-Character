@@ -14,10 +14,13 @@ Code snippets for testing and understanding Java support for Unicode. For additi
 
 ### Unicode
 
-> "So I have an announcement to make: if you are a programmer working in 2003 and you don't know the basics of characters, character sets, encodings, and Unicode, and I catch you, I'm going to punish you by making you peel onions for 6 months in a submarine. I swear I will." - Joel Spolsky, [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
+> "So I have an announcement to make: if you are a programmer working in 2003 and you don't know the basics of characters, character sets, encodings, and Unicode, and I catch you, I'm going to punish you by making you peel onions for 6 months in a submarine. I swear I will." 
+>
+> **Joel Spolsky**
+> [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 
 - [An Introduction to Writing Systems & Unicode](https://r12a.github.io/scripts/tutorial/)
-- [Encoding converter](https://r12a.github.io/apps/encodings/)
+- [Encoding converter](https://r12a.github.io/app-encodings/)
 
 ### Java Support
 - [Supplementary Characters in the Java Platform](http://www.oracle.com/us/technologies/java/supplementary-142654.html)
