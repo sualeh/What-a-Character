@@ -16,6 +16,12 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 package us.fatehi.whatacharacter;
 
 
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class SupplementaryCharacters
 {
 
@@ -27,26 +33,40 @@ public class SupplementaryCharacters
 
     // A character outside of the Basic Multilingual Plane is
     // represented by a surrogate pair.
-    final int cp = 0x01D4AE;
-    System.out.println(String.format(
-      "character: %s - code point: %d - %s in %s; character count: %d",
-      new StringBuffer().appendCodePoint(cp),
-      cp,
-      Character.getName(cp),
-      Character.UnicodeBlock.of(cp),
-      Character.charCount(cp)));
+    final int cp = 0x010400; // 'DESERET CAPITAL LETTER LONG I' - 𐐀
+    final SortedMap<String, String> map =
+      new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
+    map.put("character",
+            new StringBuffer()
+              .appendCodePoint(cp)
+              .toString());
+    map.put("code point", String.valueOf(cp));
+    map.put("Unicode name", Character.getName(cp));
+    map.put("Unicode block",
+            Character.UnicodeBlock
+              .of(cp)
+              .toString());
+    map.put("Unicode script",
+            Character.UnicodeScript
+              .of(cp)
+              .toString());
+    map.put("count of char", String.valueOf(Character.charCount(cp)));
+    final Gson gson = new GsonBuilder()
+      .setPrettyPrinting()
+      .create();
+    System.out.println(gson.toJson(map));
+    System.out.println();
 
     // String gives the length including surrogate characters, NOT the
     // number of Unicode characters
     final String text = "text" + new StringBuffer().appendCodePoint(cp);
-    System.out.println("length: " + text.length());
-
+    System.out.println(text);
     // Using a StringBuffer to delete characters can cause problems,
     // since it is not aware of Supplementary Plane characters
-    final String textDeleted = new StringBuffer(text)
+    final String textCorrupted = new StringBuffer(text)
       .deleteCharAt(4)
       .toString();
-    System.out.println(textDeleted);
+    System.out.println(textCorrupted);
   }
 
 }

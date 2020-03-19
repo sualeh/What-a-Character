@@ -26,7 +26,7 @@ public class Encodings
 
   public static void main(String[] args)
   {
-    final String text = "aאあ𣎴";
+    final String text = "Aß東𐐀";
 
     printCodePoints(text);
     System.out.println();
