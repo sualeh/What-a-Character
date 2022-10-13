@@ -22,7 +22,7 @@ public class ConvertUnicodeNumbers
   public static void main(String[] args)
   {
 
-    // Demonstrates Java number parsing functions can handle numeric values from
+    // Demonstrates number parsing functions can handle numeric values from
     // other (non-English) languages
 
     final String hindiNumber = "१२३४५६७८९०";

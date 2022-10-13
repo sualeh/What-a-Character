@@ -32,7 +32,7 @@ import com.google.gson.GsonBuilder;
  * the currently running JRE. The details are printed in JSON, so the output can
  * be imported somewhere else.
  */
-public class Charsets
+public class AvailableEncodings
 {
 
   public static void main(final String[] args)
