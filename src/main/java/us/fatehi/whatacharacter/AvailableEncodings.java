@@ -29,7 +29,7 @@ import com.google.gson.GsonBuilder;
 
 /**
  * Prints details of all charsets (technically, encoding schemes) supported on
- * the currently running JRE. The details are printed in JSON, so the output can
+ * the currently running language runtime. The details are printed in JSON, so the output can
  * be imported somewhere else.
  */
 public class AvailableEncodings
