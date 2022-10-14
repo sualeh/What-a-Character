@@ -1,7 +1,3 @@
-# Demonstrates Python number parsing functions can handle numeric values from
-# other (non-English) languages
-
-
 def main():
     # How to use Unicode characters in and character literals
     # The hexadecimal values can be in uppercase or lowercase
