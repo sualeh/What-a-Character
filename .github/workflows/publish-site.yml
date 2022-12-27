@@ -1,0 +1,79 @@
+name: Deploy What a Character Slides
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Build Slides
+    runs-on: ubuntu-latest
+    
+    steps:
+
+    - id: checkout-code
+      name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - id: chown-slides
+      name: Create target directory
+      run: |
+        mkdir -p target/slides
+        
+    - id: marp-build
+      name: Render Slides with Marp
+      uses: docker://marpteam/marp-cli:v2.2.2
+      with:
+        args: --allow-local-files -I .src/main/content/slides/ -o ./target/slides --pdf
+      env:
+        MARP_USER: root:root
+
+    - id: chown-slides
+      name: Change Ownership of Generated Slides
+      if: ${{ false }}
+      run: |
+        sudo chown -R 1001:121 ./static/slides
+        ls -alR ./static/slides
+
+    - id: configure-pages
+      name: Setup Pages
+      uses: actions/configure-pages@v2
+
+    - id: upload-artifact
+      name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./target/slides
+
+
+  deploy:
+    name: Deploy Website
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+    needs: build
+
+    steps:
+
+    - id: deploy-pages
+      name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v1
