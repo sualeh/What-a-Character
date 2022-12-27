@@ -41,7 +41,7 @@ jobs:
       name: Render Slides with Marp
       uses: docker://marpteam/marp-cli:v2.2.2
       with:
-        args: --allow-local-files -I .src/main/content/slides/ -o ./target/slides --pdf
+        args: --allow-local-files -I ./src/main/slides/ -o ./target/slides --pdf
       env:
         MARP_USER: root:root
 
