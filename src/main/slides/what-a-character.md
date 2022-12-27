@@ -49,8 +49,7 @@ _class:
 
 ## The Tower of Babel
 
-- Explains the confusion of tongues
-- Humans are divided into linguistic groups
+- Explains the confusion of tongues (or languages)
 - Programmers seek to deal with these differences
 
 ![bg right](babel.jpg "The Tower of Babel")
@@ -76,9 +75,9 @@ We will deal mainly with the written form of language, or scripts, in this discu
 
 ## Precomposed Characters
 
-- **Combining mark** - modeled as a character, intended to modify other characters - for example, diacritical marks and accents
+- **Combining mark** - modeled as a character, but modifies other characters, such as diacritical marks and accents
     For example, **e + ̆  = ĕ**
-- **Precomposed character** - may typically represent a letter with a diacritical mark
+- **Precomposed character** - typically a letter with a diacritical mark
     For example, **é = e + ́**
 
 Precomposed characters may need to be normalized into combining characters for sorting and processing.
@@ -158,8 +157,7 @@ Let us assume that an expert committee has figured out what a character is, and 
 ## Unicode Character Classifications
 
 - Each code point falls into a single **General Category**
-- Major classes are Letter, Mark, Number, Punctuation, Symbol,
-    Separator
+- Major classes are Letter, Mark, Number, Punctuation, Symbol, Separator
 - Each major class has subclasses
 
 
@@ -263,7 +261,7 @@ Unicode with Java
 | Java SE 11 | Unicode 10.0 |
 | Java SE 17 | Unicode 13.0 |
 
-* Supplementary characters assigned in Unicode 3.1
+\* Supplementary characters assigned in Unicode 3.1
 
 
 ## What is a Java `char`?
@@ -473,7 +471,7 @@ Many `Character` static methods take `int` code points
 - `boolean isDigit(int codePoint)`
 - `int toLowerCase(int codePoint)`
 
-As do some `String` methods
+As do some `String` methods like
 
 - `int indexOf(int ch)`
 - `new String(int[] codePoints, int offset, int count)`
@@ -483,8 +481,12 @@ As do some `String` methods
 
 Iterate over code points using `String.codePoints()` streams
 
-- `"text".codePoints().forEach(System.out::print)`
-- `"text".codePoints().toArray()`
+```java
+"text".codePoints().forEach(System.out::print)
+```
+```java
+"text".codePoints().toArray()
+```
 
 
 ## Surrogates and Code Points

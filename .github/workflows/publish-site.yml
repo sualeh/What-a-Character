@@ -1,4 +1,4 @@
-name: Deploy What a Character Slides
+name: Build and Deploy Slides
 
 on:
   push:
@@ -32,16 +32,16 @@ jobs:
       with:
         submodules: recursive
 
-    - id: create-target-directory
-      name: Create target directory
+    - id: create-bin-directory
+      name: Create bin directory
       run: |
-        mkdir -p target/slides
+        mkdir -p bin/slides
         
     - id: marp-build
       name: Render Slides with Marp
       uses: docker://marpteam/marp-cli:v2.2.2
       with:
-        args: --allow-local-files -I ./src/main/slides/ -o ./target/slides --pdf
+        args: --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
       env:
         MARP_USER: root:root
 
@@ -60,7 +60,7 @@ jobs:
       name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
-        path: ./target/slides
+        path: ./bin/slides
 
 
   deploy:
