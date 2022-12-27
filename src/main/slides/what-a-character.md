@@ -12,12 +12,17 @@ style: |
     margin-left: 0;
   }
   h2 {
-    font-size: 120%;
+    font-size: 1.5rem;
     color: #0000DD;
   }
   pre {
     font-size: 1.0rem;
+    margin-left: 0;
   }
+  code, pre {
+    font-family: font-noto, monospace;
+    letter-spacing: 0;
+  }  
 _class:
  - lead
  - invert
@@ -520,14 +525,7 @@ Encoding specifies conversion of characters to bytes
 
 ## Common Encodings
 
-```
-| Unicode Code Point | U+0041 | U+00DF | U+6771 | U+010400 |
-| --- | --- | --- | --- | --- |
-| Glyph | A | ß | 東 | 𐐀 |
-| UTF-32 bytes | 00 00 00 41 | 00 00 00 DF | 00 00 67 71 | 00 01 04 00 |
-| UTF-16 bytes | 00 41 | 00 DF | 67 71 | D8 01 DC 00 |
-| UTF-8 bytes | 41 | C3 9F | E6 9D B1 | F0 90 90 80 |
-```
+![width:1150](common-encodings.png "Common Encodings")
 
 
 ## UTF-32
@@ -545,28 +543,8 @@ Encoding specifies conversion of characters to bytes
 
 ## UTF-16 Encoding
 
-```
-Bits in
-Code
-Point
-```
-```
-From
-Code
-Point
-```
-```
-To
-Code
-Point
-```
-```
-Characters Byte 1 Byte 2 Byte 3 Byte 4
-```
-```
-16 U+0080 U+FFFF BMP characters xxxxxxxx xxxxxxxx
-20 U+10000 U+10FFFF Supplementary plane characters 110110 xx xxxxxxxx 110111 xx xxxxxxxx
-```
+![width:1150](utf-16.png "UTF-16 Encoding")
+
 
 ## UTF-8
 
@@ -579,30 +557,8 @@ Characters Byte 1 Byte 2 Byte 3 Byte 4
 
 ## UTF-8 Encoding
 
-```
-Bits in
-Code
-Point
-```
-```
-From
-Code
-Point
-```
-```
-To
-Code
-Point
-```
-```
-Characters Byte 1 Byte 2 Byte 3 Byte 4
-```
-```
-7 U+0000 U+007F ASCII characters 0 xxxxxxx
-11 U+0080 U+07FF European characters, Arabic, Hebrew 110 xxxxx 10 xxxxxx
-16 U+0800 U+FFFF BMP characters, including CJK 1110 xxxx 10 xxxxxx 10 xxxxxx
-21 U+10000 U+1FFFFF Supplementary plane characters 11110 xxx 10 xxxxxx 10 xxxxxx 10 xxxxxx
-```
+![width:1150](utf-8.png "UTF-8 Encoding")
+
 
 ## Charset
 
@@ -646,23 +602,23 @@ catch (UnsupportedEncodingException e) { }
 - Always specify encoding to avoid cross-platform surprises
 
 
-## Code Examples
+## Reading Unicode
+
+![width:1200](reader.png "Reader")
 
 ```java
 InputStream fis = new FileInputStream("in.txt");
 Reader isr = new InputStreamReader(fis, "UTF-8");
-
-InputStreamReader
-(specify encoding)
 ```
-raw bytes (^) Unicode
-characters
+
+## Writing Unicode
+
+![width:1200](writer.png "Writer")
+
+```java
 OutputStream fos = new FileOutputStream("out.txt");
 Writer out = new OutputStreamWriter(fos, "UTF-8");
-OutputStreamWriter
-(specify encoding)
-Unicode raw bytes
-characters
+```
 
 
 ## String Data in Databases
