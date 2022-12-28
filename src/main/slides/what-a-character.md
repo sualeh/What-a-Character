@@ -17,12 +17,7 @@ style: |
   }
   pre {
     font-size: 1.0rem;
-    margin-left: 0;
   }
-  code, pre {
-    font-family: font-noto, monospace;
-    letter-spacing: 0;
-  }  
 _class:
  - lead
  - invert
@@ -166,7 +161,7 @@ Let us assume that an expert committee has figured out what a character is, and 
 - Each major class has subclasses
 
 
-## Unicode Character Category Example
+## Unicode Category Example
 
 | **L** | Letter |
 | --- | --- |
@@ -303,13 +298,16 @@ So,
 
 ## Java Unicode Character Literals
 
-Inside single quotes.
+Character literals are inside single quotes.
 
 ```java
 char ch1 = 'a';
 char ch2 = '東';
-char ch3 = '𐐀'; // (Not a BMP character!)
 ```
+
+However,
+**char ch3 = '𐐀';** 
+is a syntax error, since 'DESERET CAPITAL LETTER LONG I' is not a BMP character!
 
 
 ## Java Unicode Character Literals
@@ -334,8 +332,8 @@ String str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
 
 ## Java Unicode Code Point Literals
 
+'DESERET CAPITAL LETTER LONG I' - 𐐀
 ```java
-// 'DESERET CAPITAL LETTER LONG I' - 𐐀
 int cp = 0x010400; 
 String str = new StringBuffer()
                  .appendCodePoint(cp)
@@ -423,7 +421,13 @@ Match is true
 
 ## Use the Character Class
 
-**_NOT_**
+```java
+int cp; // some value assigned...
+if (Character.isLetter(cp))
+// ...
+```
+
+**_INSTEAD OF_**
 ```java
 char ch; // some value assigned...
 if ((ch >= 'a' && ch <= 'z') ||
@@ -431,26 +435,19 @@ if ((ch >= 'a' && ch <= 'z') ||
 // ...
 ```
 
-**_BUT_**
-```java
-int cp; // some value assigned...
-if (Character.isLetter(cp))
-// ...
-```
 
 ## Use the Character Class
 
-**_NOT_**
-```java
-char ch; // some value assigned...
-if (ch >= '0' && ch <= '9')
-// ...
-```
-
-**_BUT_**
 ```java
 int cp; // some value assigned...
 if (Character.isDigit(cp))
+// ...
+```
+
+**_INSTEAD OF_**
+```java
+char ch; // some value assigned...
+if (ch >= '0' && ch <= '9')
 // ...
 ```
 
@@ -571,14 +568,7 @@ Encoding specifies conversion of characters to bytes
 
 ## Encoding Details
 
-Glyph (^) **A ß** 東 𐐀
-UTF-32 bytes 00000000 00000000000 0 100000100000 00000000 000 00000000 1101111100000 00000000 000 0 1100111 01110001^00000 00000000 000 00000 100 00000000^00001
-UTF-16 bytes 00000000 0^100000100000000 110111110 1100111 01110001^^110110110111^00 00 00000000^00000001
-UTF-8 bytes^0^1000001^110^00011^10^011111^111010 1100010110^10^011101^1111010 010000000^1010^010000000000
-● **_bold text_** – header bits
-● grey highlight – insignificant code point bits
-● blue highlight – significant code point bits
-● yellow highlight – code point page
+![width:1150](encodings.png "Encoding Details")
 
 
 ## Converting to Bytes
@@ -586,12 +576,10 @@ UTF-8 bytes^0^1000001^110^00011^10^011111^111010 1100010110^10^011101^1111010 01
 - Always specify encoding to avoid cross-platform surprises
 
 ```java
-try {
-  String original = ....
-  byte[] utf8Bytes = original.getBytes("UTF-8");
-  String roundTrip = new String(utf8Bytes, "UTF-8");
-}
-catch (UnsupportedEncodingException e) { }
+String original = ....
+byte[] utf8Bytes = original.getBytes("UTF-8");
+String roundTrip = new String(utf8Bytes, "UTF-8");
+// and remember to handle encoding exceptions
 ```
 
 ## Streams and Readers
@@ -629,11 +617,11 @@ Writer out = new OutputStreamWriter(fos, "UTF-8");
 
 ## Where Do You Truncate?
 
-- How and where do you truncate string “Aß東𐐀”?
+How and where do you truncate string “Aß東𐐀”? 
 
-Glyph (^) **A ß** 東 𐐀
-Java char 0041 00DF^6771 D801 DC00^
-UTF-8 bytes 41 C3 9F^ E6 9D B1^ F0 90 90 80^
+![width:1100](truncate.png "Truncate")
+
+**TIP:** There is no easy answer. Use a library to truncate strings.
 
 
 ## Normalize Text
