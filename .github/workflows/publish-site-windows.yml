@@ -22,7 +22,7 @@ defaults:
 jobs:
   build:
     name: Build Slides
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
 
@@ -38,19 +38,10 @@ jobs:
         mkdir -p bin/slides
         
     - id: marp-build
-      name: Render Slides with Marp
-      uses: docker://marpteam/marp-cli:v2.2.2
-      with:
-        args: --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
-      env:
-        MARP_USER: root:root
-
-    - id: chown-slides
-      name: Change Ownership of Generated Slides
-      if: ${{ false }}
+      name: Render Slides with Marp      
       run: |
-        sudo chown -R 1001:121 ./static/slides
-        ls -alR ./static/slides
+        scoop install marp 
+        marp --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
 
     - id: configure-pages
       name: Setup Pages
