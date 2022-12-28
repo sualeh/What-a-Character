@@ -304,7 +304,7 @@ char ch2 = '東';
 ```
 
 However,
-**char ch3 = '𐐀';** 
+char ch3 = '𐐀';
 is a syntax error, since 'DESERET CAPITAL LETTER LONG I' is not a BMP character!
 
 
