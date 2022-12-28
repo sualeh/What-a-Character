@@ -1,4 +1,4 @@
-name: Build and Deploy Slides
+name: Build on Windows and Deploy Slides
 
 on:
   # push:
@@ -23,24 +23,29 @@ jobs:
   build:
     name: Build Slides
     runs-on: windows-latest
-    
+
     steps:
 
     - id: checkout-code
       name: Checkout
       uses: actions/checkout@v3
-      with:
-        submodules: recursive
 
     - id: create-bin-directory
       name: Create bin directory
       run: |
         mkdir -p bin/slides
-        
-    - id: marp-build
-      name: Render Slides with Marp      
+
+    - id: scoop-install
+      name: Install Scoop
+      shell: pwsh
       run: |
-        scoop install marp 
+        Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+        irm get.scoop.sh | iex
+
+    - id: marp-build
+      name: Render Slides with Marp
+      run: |
+        scoop install marp
         marp --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
 
     - id: configure-pages
