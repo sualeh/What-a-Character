@@ -650,9 +650,7 @@ U+0308 is a 'COMBINING DIAERESIS', or ◌̈
 ## Code Examples
 
 Slides and all code examples are on GitHub
-https://github.com/sualeh/What-a-Character
+[https://github.com/**sualeh/What-a-Character**](https://github.com/sualeh/What-a-Character)
 
-
-## Questions
-
+![width:300](qr-code.png "QR Code")
 
