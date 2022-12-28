@@ -35,12 +35,7 @@ jobs:
       run: |
         mkdir -p bin/slides
 
-    - id: scoop-install
-      name: Install Scoop
-      shell: pwsh
-      run: |
-        Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-        irm get.scoop.sh | iex
+    - uses: MinoruSekine/setup-scoop@v1
 
     - id: marp-build
       name: Render Slides with Marp

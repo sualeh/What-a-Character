@@ -29,8 +29,6 @@ jobs:
     - id: checkout-code
       name: Checkout
       uses: actions/checkout@v3
-      with:
-        submodules: recursive
 
     - id: create-bin-directory
       name: Create bin directory
