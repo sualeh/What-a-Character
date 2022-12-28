@@ -83,16 +83,14 @@ We will deal mainly with the written form of language, or scripts, in this discu
 Precomposed characters may need to be normalized into combining characters for sorting and processing.
 
 
-## Challenges Of Representing Characters
+## Challenges of Representing Characters
 
-- Uppercase and lowercase
-    **A** versus **a**
-- Word final variants
-    **ς** versus **σ**
-- Context sensitive placement
-    **◌ू** placed differently for **रू** versus **धू**
-- Consonant clusters
-    **क्ष** for ksh
+| Challenge | Example |
+| --- | --- |
+| Uppercase, lowercase and title case | **A** versus **a** |
+| Word final variants | **ς** versus **σ** |
+| Context sensitive placement | **◌ू** placed differently for **रू** versus **धू** |
+| Consonant clusters | **क्ष** for ksh |
 
 
 ## Characters
