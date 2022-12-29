@@ -2,6 +2,12 @@ plugins {
   id 'java'
 }
 
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(17)
+  }
+}
+
 repositories {
   mavenLocal()
   mavenCentral()
@@ -9,8 +15,8 @@ repositories {
 
 dependencies {
   implementation 'com.google.code.gson:gson:2.8.5'
-  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
-  testCompile 'org.hamcrest:hamcrest:2.1'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+  testImplementation 'org.hamcrest:hamcrest:2.2'
 }
 
 compileJava.options.encoding = 'UTF-8'
@@ -20,6 +26,5 @@ test {
 }
 
 group = 'us.fatehi'
-version = '1.0.1'
+version = '1.0.2'
 description = 'What a Character'
-sourceCompatibility = '1.8'
