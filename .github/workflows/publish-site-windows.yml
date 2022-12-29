@@ -32,22 +32,19 @@ jobs:
       run: |
         mkdir -p bin/slides
 
-    - id: scoop-install
-      name: Install Scoop
+    - id: marp-build
+      name: Render Slides with Marp
       shell: pwsh
       run: |
+        # Install Scoop
         Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
         iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
         scoop update
         scoop -v
+        # Install Marp
         scoop install marp
         marp -v
-
-    - id: marp-build
-      name: Render Slides with Marp
-      shell: pwsh
-      run: |        
-        marp -v
+        # Generate slides
         marp --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
 
     - id: configure-pages
