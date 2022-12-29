@@ -38,13 +38,15 @@ jobs:
       run: |
         Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
         iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
-        marp -v
+        scoop update
+        scoop -v
 
     - id: marp-build
       name: Render Slides with Marp
       shell: pwsh
       run: |
         scoop install marp
+        marp -v
         marp --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
 
     - id: configure-pages
