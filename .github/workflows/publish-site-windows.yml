@@ -40,12 +40,13 @@ jobs:
         iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
         scoop update
         scoop -v
+        scoop install marp
+        marp -v
 
     - id: marp-build
       name: Render Slides with Marp
       shell: pwsh
-      run: |
-        scoop install marp
+      run: |        
         marp -v
         marp --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
 
