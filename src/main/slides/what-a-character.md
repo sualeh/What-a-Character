@@ -292,8 +292,6 @@ So,
 
 ## Java Unicode Character Literals
 
-Character literals are inside single quotes.
-
 ```java
 char ch1 = 'a';
 char ch2 = '東';
@@ -303,7 +301,7 @@ However,
 ```java
 char ch3 = '𐐀';
 ```
-is a syntax error, since 'DESERET CAPITAL LETTER LONG I' is not a BMP character!
+is a syntax error, since 'DESERET CAPITAL LETTER LONG I' - 𐐀 is not a BMP character - it needs surrogate pairs.
 
 
 ## Java Unicode Character Literals
