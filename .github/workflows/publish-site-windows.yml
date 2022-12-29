@@ -15,10 +15,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     name: Build Slides
@@ -32,6 +28,7 @@ jobs:
 
     - id: create-bin-directory
       name: Create bin directory
+      shell: bash
       run: |
         mkdir -p bin/slides
 
@@ -41,9 +38,11 @@ jobs:
       run: |
         Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
         iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+        marp -v
 
     - id: marp-build
       name: Render Slides with Marp
+      shell: pwsh
       run: |
         scoop install marp
         marp --allow-local-files --html -I ./src/main/slides/ -o ./bin/slides --pdf
