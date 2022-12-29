@@ -6,6 +6,10 @@ Explains Unicode and character encoding to software engineers, and the pitfalls 
 
 Goes with the [What a Character](https://sualeh.github.io/What-a-Character/what-a-character.pdf) presentation slides.
 
+## Video
+
+Video presentation of the [What a Character](https://vimeo.com/743222944) content.
+
 ## Code
 
 Code snippets for testing and understanding Java support for Unicode. For additional code, please see [utf8db2](https://github.com/sualeh/utf8db2). 
