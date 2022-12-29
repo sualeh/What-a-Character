@@ -243,8 +243,6 @@ Unicode 15.0 adds new scripts, and additional emojis.
 
 ## Unicode with Java
 
-Unicode with Java
-
 ![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
 
 
@@ -263,8 +261,6 @@ Unicode with Java
 
 
 ## What is a Java `char`?
-
-So, what is a Java `char`?
 
 ![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
 
@@ -304,7 +300,9 @@ char ch2 = '東';
 ```
 
 However,
+```java
 char ch3 = '𐐀';
+```
 is a syntax error, since 'DESERET CAPITAL LETTER LONG I' is not a BMP character!
 
 
@@ -330,8 +328,8 @@ String str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
 
 ## Java Unicode Code Point Literals
 
-'DESERET CAPITAL LETTER LONG I' - 𐐀
 ```java
+// 'DESERET CAPITAL LETTER LONG I' - 𐐀
 int cp = 0x010400; 
 String str = new StringBuffer()
                  .appendCodePoint(cp)
@@ -453,7 +451,7 @@ if (ch >= '0' && ch <= '9')
 ## Use the Character Class: But Carefully?
 
 ```java
-// ‘LATIN SMALL LETTER SHARP S’
+// 'LATIN SMALL LETTER SHARP S' - ß
 char germanChar = 'ß'; 
 char germanCharUpper = Character
                        .toUpperCase(germanChar);
