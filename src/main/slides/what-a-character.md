@@ -188,10 +188,7 @@ Let us assume that an expert committee has figured out what a character is, and 
 
 ## Code Planes
 
-![bg right fit](code-planes.png "Code planes")
-
-https://www.w3.org/International/articles/definitions-characters/
-
+![width:600](code-planes.png "Code planes")
 
 ## Usage Heat Map
 
