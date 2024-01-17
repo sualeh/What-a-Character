@@ -1,0 +1,24 @@
+{
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "git.followTagsWhenSync": true,
+  "git.rebaseWhenSync": true,
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.debug.settings.onBuildFailureProceed": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "git.postCommitCommand": "sync",
+  "python.testing.pytestArgs": [
+    "."
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "scm.showActionButton": false,
+  "git.showActionButton": {
+    "commit": false,
+    "publish": false,
+    "sync": false
+  },
+  "git.autofetch": true,
+  "editor.minimap.enabled": false
+}
