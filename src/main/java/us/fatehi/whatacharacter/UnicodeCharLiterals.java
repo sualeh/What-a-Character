@@ -2,7 +2,7 @@
 
 What a Character
 https://github.com/sualeh/What-a-Character
-Copyright (c) 2016-2023, Sualeh Fatehi.
+Copyright (c) 2016-2024, Sualeh Fatehi.
 
 This library is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
