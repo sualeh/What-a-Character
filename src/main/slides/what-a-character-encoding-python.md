@@ -58,30 +58,24 @@ utf8_bytes = codecs.encode(original, "utf-8")
 round_trip = codecs.decode(utf8_bytes, "utf-8")
 ```
 
-## Streams and Readers
-
-- **Streams** read and write bytes
-- **Readers** read characters from a byte stream
-- **Writers** write characters to a byte stream
-- Always specify encoding to avoid cross-platform surprises
-
 
 ## Reading Unicode
 
-![width:1200](reader.png "Reader")
+Specify `encoding` when opening a file.
 
-```java
-InputStream fis = new FileInputStream("in.txt");
-Reader isr = new InputStreamReader(fis, "UTF-8");
+```python
+with open("test.txt", "r", encoding="utf-8") as reader:
+    print(reader.read())
 ```
+
 
 ## Writing Unicode
 
-![width:1200](writer.png "Writer")
+Specify `encoding` when opening a file.
 
-```java
-OutputStream fos = new FileOutputStream("out.txt");
-Writer out = new OutputStreamWriter(fos, "UTF-8");
+```python
+with open("test.txt", "w", encoding="utf-8") as writer:
+    writer.write(string)
 ```
 
 
@@ -89,17 +83,6 @@ Writer out = new OutputStreamWriter(fos, "UTF-8");
 
 - `VARCHAR` and `CHAR` specify lengths in bytes, by default
 - `NVARCHAR` and `NCHAR` specify lengths in characters, but average to a certain multiplier for bytes
-
-
-## Normalize Text
-
-- Normalize text for comparison and sorting
-- Java supports all the Unicode normalized forms
-- Use the Normalizer class
-
-For example, the normalized decomposition of "schön" is "scho\u0308n"
-
-U+0308 is a 'COMBINING DIAERESIS', or ◌̈
 
 
 ## Code Examples

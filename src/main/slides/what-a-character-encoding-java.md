@@ -73,7 +73,7 @@ String roundTrip = new String(utf8Bytes, "UTF-8");
 
 ```java
 InputStream fis = new FileInputStream("in.txt");
-Reader isr = new InputStreamReader(fis, "UTF-8");
+Reader rdr = new InputStreamReader(fis, "UTF-8");
 ```
 
 ## Writing Unicode
@@ -82,7 +82,7 @@ Reader isr = new InputStreamReader(fis, "UTF-8");
 
 ```java
 OutputStream fos = new FileOutputStream("out.txt");
-Writer out = new OutputStreamWriter(fos, "UTF-8");
+Writer wtr = new OutputStreamWriter(fos, "UTF-8");
 ```
 
 
