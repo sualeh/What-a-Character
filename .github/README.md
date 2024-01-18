@@ -4,7 +4,13 @@ Explains Unicode and character encoding to software engineers, and the pitfalls 
 
 ## Slides
 
-Goes with the [What a Character](https://sualeh.github.io/What-a-Character/what-a-character.pdf) presentation slides.
+Goes with the **What a Character** presentation slides.
+
+- [What a Character - Concepts](https://sualeh.github.io/What-a-Character/what-a-character-concepts.pdf) 
+- [What a Character - Encoding](https://sualeh.github.io/What-a-Character/what-a-character-encoding.pdf) 
+- [What a Character - Java Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-java.pdf) 
+- [What a Character - Python Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-python.pdf) 
+
 
 ## Video
 
