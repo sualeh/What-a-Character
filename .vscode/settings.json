@@ -29,5 +29,6 @@
   "java.format.comments.enabled": false,
   "python.analysis.autoFormatStrings": true,
   "git.pullBeforeCheckout": true,
-  "git.fetchOnPull": true
+  "git.fetchOnPull": true,
+  "git.autoStash": true
 }
