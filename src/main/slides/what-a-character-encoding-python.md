@@ -40,21 +40,20 @@ See the [presentation on encoding concepts](what-a-character-encoding.pdf).
 
 
 
-## Charset
+## `codecs`
 
-- Numerous character-encoding schemes supported via the `Charset` class
-- Not all encoding schemes may be installed by default
-- Many IBM EBCDIC code pages are supported
-- StandardCharsets defines encodings that are always available
-- Every encoding has a **canonical name** or MIME-preferred name
+- Provides functions for encoding and decoding
+- Supports a wide variety of encodings
+- Provides classes for reading and writing data with a specific encoding
+- Handles encoding and decoding errors through different error handling schemes
 
 
 ## Converting to Bytes
 
 - Always specify encoding to avoid cross-platform surprises
 
-```java
-String original = ....
+```python
+original: str = ....
 byte[] utf8Bytes = original.getBytes("UTF-8");
 String roundTrip = new String(utf8Bytes, "UTF-8");
 // and remember to handle encoding exceptions
