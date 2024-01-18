@@ -20,5 +20,6 @@
     "sync": false
   },
   "git.autofetch": true,
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "editor.formatOnSaveMode": "modifications"
 }
