@@ -33,7 +33,7 @@ Encoding in Python
 
 ## Encoding 
 
-See the [presentation on encoding concepts](what-a-character-encoding.pdf).
+See the [presentation on encoding concepts](https://sualeh.github.io/What-a-Character/what-a-character-encoding.pdf) .
 
 ![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
 
