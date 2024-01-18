@@ -5,8 +5,8 @@
   "git.rebaseWhenSync": true,
   "java.configuration.updateBuildConfiguration": "interactive",
   "java.debug.settings.onBuildFailureProceed": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": false,
   "git.postCommitCommand": "sync",
   "python.testing.pytestArgs": [
     "."
@@ -21,5 +21,11 @@
   },
   "git.autofetch": true,
   "editor.minimap.enabled": false,
-  "editor.formatOnSaveMode": "modifications"
+  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnType": true,
+  "notebook.formatOnCellExecution": true,
+  "notebook.formatOnSave.enabled": true,
+  "json.format.keepLines": true,
+  "java.format.comments.enabled": false,
+  "python.analysis.autoFormatStrings": true
 }

@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/java,pycharm,python,intellij+all,eclipse,gradle,maven
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,pycharm,python,intellij+all,eclipse,gradle,maven
 
+test.txt
+
 ### Eclipse ###
 .metadata
 bin/
