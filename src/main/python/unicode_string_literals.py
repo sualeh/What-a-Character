@@ -14,18 +14,27 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 
 """
 
+
+def print_unicode(ch):
+    print(to_unicode(ch))
+
+
+def to_unicode(ch):
+    return "\\u{:04x}".format(ord(ch))
+
+
 def main():
     # How to use Unicode characters in and character literals
     # The hexadecimal values can be in uppercase or lowercase
     # The characters may be in any Unicode plane
 
-    char1 = 'a'
+    char1 = "a"
     print(char1)
 
-    char2 = '\u00EA'
+    char2 = "\u00EA"
     print(char2)
 
-    char3 = '\\'
+    char3 = "\\"
     print(char3)
 
     original1 = "a\u00ea\u00f1\u00fcc"
@@ -33,6 +42,19 @@ def main():
 
     original2 = "A\u00EA\u00F1\u00FCC"
     print(original2)
+
+    original3 = "\\"
+    print(original3)
+
+    # Character escape sequences
+    print_unicode("\t")
+    print_unicode("\b")
+    print_unicode("\n")
+    print_unicode("\r")
+    print_unicode("\f")
+    print_unicode("'")
+    print_unicode('"')
+    print_unicode("\\")
 
 
 if __name__ == "__main__":
