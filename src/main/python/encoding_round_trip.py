@@ -19,7 +19,7 @@ import codecs
 
 def main():
     original: str = "Some string Aß東𐐀"
-    utf8_bytes: bytes = codecs.encode(original, encoding="utf-8")
+    utf8_bytes: bytes = codecs.encode(original, "utf-8")
     round_trip: str = codecs.decode(utf8_bytes, "utf-8")
     print(round_trip)
 

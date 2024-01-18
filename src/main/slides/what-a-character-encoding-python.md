@@ -53,10 +53,9 @@ See the [presentation on encoding concepts](what-a-character-encoding.pdf).
 - Always specify encoding to avoid cross-platform surprises
 
 ```python
-original: str = ....
-byte[] utf8Bytes = original.getBytes("UTF-8");
-String roundTrip = new String(utf8Bytes, "UTF-8");
-// and remember to handle encoding exceptions
+original: str = ...
+utf8_bytes = codecs.encode(original, "utf-8")
+round_trip = codecs.decode(utf8_bytes, "utf-8")
 ```
 
 ## Streams and Readers
