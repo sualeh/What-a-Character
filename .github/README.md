@@ -7,11 +7,13 @@ Explains Unicode and character encoding to software engineers, and the pitfalls 
 Goes with the **What a Character** presentation slides.
 
 - **Overview**
-  - [What a Character - Concepts](https://sualeh.github.io/What-a-Character/what-a-character-concepts.pdf) 
+  - [Concepts](https://sualeh.github.io/What-a-Character/what-a-character-concepts.pdf) 
+  - [Unicode Support in Java](https://sualeh.github.io/What-a-Character/what-a-character-unicode-support-in-java.pdf)   
+  - [Unicode Support in Python](https://sualeh.github.io/What-a-Character/what-a-character-unicode-support-in-python.pdf) 
 - **Encoding**
-  - [What a Character - Encoding Concepts](https://sualeh.github.io/What-a-Character/what-a-character-encoding.pdf) 
-  - [What a Character - Java Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-java.pdf) 
-  - [What a Character - Python Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-python.pdf) 
+  - [Encoding Concepts](https://sualeh.github.io/What-a-Character/what-a-character-encoding.pdf) 
+  - [Java Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-java.pdf) 
+  - [Python Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-python.pdf) 
 
 
 ## Video

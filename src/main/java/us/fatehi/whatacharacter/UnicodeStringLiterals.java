@@ -25,6 +25,8 @@ public class UnicodeStringLiterals
     // The hexadecimal values can be in uppercase or lowercase
     // The characters are always in the Basic Multilingual Plane
 
+    // Character literals
+
     char char1 = 'a';
     System.out.println(char1);
 
@@ -34,16 +36,26 @@ public class UnicodeStringLiterals
     char char3 = '\\';
     System.out.println(char3);
 
-    String original1 = "a\u00ea\u00f1\u00fcc";
-    System.out.println(original1);
+    
+    // \\uHHHH
+    // where H is a case-insensitive hexadecimal character
 
-    String original2 = "A\u00EA\u00F1\u00FCC";
-    System.out.println(original2);
+    String str1 = "a\u00ea\u00f1\u00fcc";
+    System.out.println(str1);
 
-    String original3 = "\\";
-    System.out.println(original3);
+    String str2 = "A\u00EA\u00F1\u00FCC";
+    System.out.println(str2);
+
+
+    // 'DESERET CAPITAL LETTER LONG I' - 𐐀
+
+    String cp1 = Character.toString(0x010400);      
+    System.out.println(cp1);
+    System.out.println(cp1.length());    
+    System.out.println(cp1.codePointCount(0, cp1.length()));
 
     // Character escape sequences
+
     printUnicode('\t');
     printUnicode('\b');
     printUnicode('\n');

@@ -101,17 +101,6 @@ How and where do you truncate string “Aß東𐐀”?
 **TIP:** There is no easy answer. Use a library to truncate strings.
 
 
-## Normalize Text
-
-- Normalize text for comparison and sorting
-- Java supports all the Unicode normalized forms
-- Use the Normalizer class
-
-For example, the normalized decomposition of "schön" is "scho\u0308n"
-
-U+0308 is a 'COMBINING DIAERESIS', or ◌̈
-
-
 ## Code Examples
 
 Slides and all code examples are on GitHub
