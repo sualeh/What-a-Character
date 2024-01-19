@@ -79,35 +79,35 @@ string = chr(cp1)
 
 
 
-## Java and Unicode
+## Python and Unicode
 
-```java
-String greekWord = "ΣΚΎΛΟΣ"; // dog
-String greekLower = greekWord.toLowerCase();
+```python
+greek_word = "ΣΚΎΛΟΣ"  # dog
+greek_lower = greek_upper.lower()
 ```
 
 **Result:**
-`greekLower` is "σκύλος"
+`greek_lower` is "σκύλος"
 (Notice that the first and last letter are both sigma)
 
 
-## Java and Unicode
+## Python and Unicode
 
-```java
-String germanWord = "straße"; // street
-String germanUpper = germanWord.toUpperCase();
+```python
+german_word = "straße"  # street
+german_upper = german_word.upper()
 ```
 
 **Result:**
-`germanUpper` is "STRASSE"
+`german_upper` is "STRASSE"
 (Notice that the string lengths are different)
 
 
-## Java Integer Parsing
+## Python Integer Parsing
 
-```java
-String hindiNumber = "१२३४५६७८९०";
-int number = Integer.parseInt(hindiNumber);
+```python
+hindi_number = "१२३४५६७८९०"
+number = int(hindi_number)
 ```
 
 **Result:**
@@ -129,17 +129,15 @@ Pattern.compile("\\p{Nd}*") // good match
 First match is false but second match is true
 
 
-## Java Patterns
+## Python Patterns
 
-```java
-Pattern pattern = Pattern.compile("σκύλος",
-    Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-
-pattern.matcher("ΣΚΎΛΟΣ").matches();
+```python
+match_result = re.match("σκύλος", "ΣΚΎΛΟΣ", re.IGNORECASE)
+matches = bool(match_result)
 ```
 
 **Result:**
-Match is true
+`match_result` is True
 
 
 ## Use the Character Class
@@ -173,71 +171,6 @@ char ch; // some value assigned...
 if (ch >= '0' && ch <= '9')
 // ...
 ```
-
-
-## Use the Character Class: But Carefully?
-
-```java
-// 'LATIN SMALL LETTER SHARP S' - ß
-char germanChar = 'ß'; 
-char germanCharUpper = Character
-                       .toUpperCase(germanChar);
-```
-
-**Result:**
-`germanCharUpper` is 'ß' (but we expect "SS")
-(No exception is thrown, and no conversion is done!)
-
-
-## Use `int` Instead of `char` in Java
-
-Many `Character` static methods take `int` code points
-
-- `boolean isDigit(int codePoint)`
-- `int toLowerCase(int codePoint)`
-
-As do some `String` methods like
-
-- `int indexOf(int ch)`
-- `new String(int[] codePoints, int offset, int count)`
-
-
-## Iterate Over Code Points
-
-Iterate over code points using `String.codePoints()` streams
-
-```java
-"text".codePoints().forEach(System.out::print)
-```
-```java
-"text".codePoints().toArray()
-```
-
-
-## Surrogates and Code Points
-
-`Character` static methods allow conversions from surrogate pairs to code points
-
-- `char[] toChars(int codePoint)`
-- `boolean isSurrogatePair(char high, char low)`
-- `int codePointAt(char[] a, int index)`
-
-
-## Beware of Breakage
-
-- Some `String` methods, such as `substring(...)` and `length()` do not understand surrogates
-- `StringBuilder` `delete(...)` method may not work as intended
-
-
-## Normalize Text
-
-- Normalize text for comparison and sorting
-- Java supports all the Unicode normalized forms
-- Use the Normalizer class
-
-For example, the normalized decomposition of "schön" is "scho\u0308n"
-
-U+0308 is a 'COMBINING DIAERESIS', or ◌̈
 
 
 ## Code Examples

@@ -17,9 +17,9 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 def main():
     # Demonstrates number parsing functions can handle numeric values from
     # other (non-English) languages
-    hindiNumber: str = "१२३४५६७८९०"
-    number: int = int(hindiNumber)
-    print(f"{hindiNumber} = {number}")
+    hindi_number: str = "१२३४५६७८९०"
+    number: int = int(hindi_number)
+    print(f"{hindi_number} = {number}")
 
 
 if __name__ == "__main__":
