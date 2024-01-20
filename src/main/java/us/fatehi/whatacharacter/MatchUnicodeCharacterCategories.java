@@ -28,23 +28,19 @@ public class MatchUnicodeCharacterCategories
     // Unicode character categories
 
     final Pattern digit = Pattern.compile("[0-9]*");
+    final Pattern standard_digit = Pattern.compile("\\d*");
     final Pattern unicode_digit = Pattern.compile("\\p{Nd}*");
 
     final String hindiNumber = "१२३४५६७८९०";
 
-    System.out.printf("Plain digit match for %s using pattern %s is %s%n",
-                      hindiNumber,
-                      digit.pattern(),
-                      digit
-                        .matcher(hindiNumber)
-                        .matches());
+    System.out.printf("Plain digit match for %s using pattern %s is %s%n", hindiNumber,
+        digit.pattern(), digit.matcher(hindiNumber).matches());
 
-    System.out.printf("Unicode digit match for %s using pattern %s is %s%n",
-                      hindiNumber,
-                      unicode_digit.pattern(),
-                      unicode_digit
-                        .matcher(hindiNumber)
-                        .matches());
+    System.out.printf("Standard digit match for %s using pattern %s is %s%n", hindiNumber,
+        standard_digit.pattern(), standard_digit.matcher(hindiNumber).matches());
+
+    System.out.printf("Unicode digit match for %s using pattern %s is %s%n", hindiNumber,
+        unicode_digit.pattern(), unicode_digit.matcher(hindiNumber).matches());
   }
 
 }
