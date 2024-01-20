@@ -49,7 +49,6 @@ Python can represent characters from the BMP or any other plane.
 
 - `\uHHHH` - where H is a case-insensitive hexadecimal character
 - Only supports the Basic Multilingual Plane
-- Supplementary characters are written as **surrogate pairs**
 
 ```python
 char2 = "\u00EA" # ‘ê’
@@ -62,7 +61,7 @@ str2 = "A\u00EA\u00F1\u00FCC" # “AêñüC”
 
 - `0xHHHHHH` - where H is a case-insensitive hexadecimal character
 - Specify code plane with code point
-- No surrogate pairs needed
+- Supports code points in supplemental planes
 
 
 ## Python Unicode Code Point Literals
@@ -115,62 +114,64 @@ number = int(hindi_number)
 `number` is 1234567890
 
 
-## Java Regular Expressions
+## Python Regular Expressions
 
-```java
-String hindiNumber = "१२३४५६७८९०";
-Pattern.compile("[0-9]*") // bad match
-       .matcher(hindiNumber).matches();
-Pattern.compile("\\p{Nd}*") // good match
-       .matcher(hindiNumber).matches();
+```python
+import re
+
+hindi_number = "१२३४५६७८९०"
+
+digit_regex = r"[0-9]*"
+match_result = re.match(digit_regex, hindi_number)
+matches = bool(match_result)
 ```
 
 **Result:**
-First match is false but second match is true
+Regex does not match a string of Unicode numbers
+
+
+## Python Regular Expressions
+
+```python
+import re
+
+hindi_number = "१२३४५६७८९०"
+
+digit_regex = r"\d*"
+match_result = re.match(digit_regex, hindi_number)
+matches = bool(match_result)
+```
+
+**Result:**
+"\d" matches a digit in any language
+
+
+## Python Regular Expressions
+
+```python
+import regex
+
+hindi_number = "१२३४५६७८९०"
+
+digit_regex = r"\p{Nd}*"
+match_result = regex.match(digit_regex, hindi_number)
+matches = bool(match_result)
+```
+
+**Result:**
+Use `regex` to match Unicode character classes
 
 
 ## Python Patterns
 
 ```python
+import re
 match_result = re.match("σκύλος", "ΣΚΎΛΟΣ", re.IGNORECASE)
 matches = bool(match_result)
 ```
 
 **Result:**
-`match_result` is True
-
-
-## Use the Character Class
-
-```java
-int cp; // some value assigned...
-if (Character.isLetter(cp))
-// ...
-```
-
-**_INSTEAD OF_**
-```java
-char ch; // some value assigned...
-if ((ch >= 'a' && ch <= 'z') ||
-    (ch >= 'A' && ch <= 'Z'))
-// ...
-```
-
-
-## Use the Character Class
-
-```java
-int cp; // some value assigned...
-if (Character.isDigit(cp))
-// ...
-```
-
-**_INSTEAD OF_**
-```java
-char ch; // some value assigned...
-if (ch >= '0' && ch <= '9')
-// ...
-```
+`matches` is True
 
 
 ## Code Examples
