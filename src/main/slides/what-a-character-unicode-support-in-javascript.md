@@ -46,8 +46,8 @@ Unicode Support in JavaScript
 
 ```javascript
 ch1 = 'a'
-ch2 = '東'
-ch3 = '𐐀'
+ch2 = '東' // (Not an ASCII character!)
+ch3 = '𐐀' // (Not a BMP character!)
 ```
 
 

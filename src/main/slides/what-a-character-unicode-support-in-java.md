@@ -83,14 +83,14 @@ So,
 
 ```java
 char ch1 = 'a';
-char ch2 = '東';
+char ch2 = '東'; // (Not an ASCII character!)
 ```
 
 However,
 ```java
-char ch3 = '𐐀';
+char ch3 = '𐐀'; // (Not a BMP character!)
 ```
-is a syntax error, since 'DESERET CAPITAL LETTER LONG I' - 𐐀 is not a BMP character - it needs surrogate pairs.
+is a syntax error, since 'DESERET CAPITAL LETTER LONG I' - 𐐀 needs surrogate pairs.
 
 
 ## Java Unicode Character Literals

@@ -39,8 +39,8 @@ Unicode Support in Python
 
 ```python
 ch1 = 'a'
-ch2 = '東'
-ch3 = '𐐀'
+ch2 = '東' # (Not an ASCII character!)
+ch3 = '𐐀' # (Not a BMP character!)
 ```
 Python can represent characters from the BMP or any other plane.
 

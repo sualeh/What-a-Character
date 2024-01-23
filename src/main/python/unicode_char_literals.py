@@ -18,11 +18,13 @@ def main():
     # Demonstrates how to use Unicode characters in string and character literals
     # The hexadecimal values can be in uppercase or lowercase
     # The characters may be in any Unicode plane
+
     ch1 = 'a'
-    # ch2 = '\' # (Backslash is a syntax error!)
-    ch3 = '東'
-    ch4 = '𐐀'
-    print(f"{ch1}, {ch3}, {ch4}")
+    ch2 = "東" # (Not an ASCII character!)
+    ch3 = "𐐀" # (Not a BMP character!)
+    # ch4 = '\' # (Backslash is a syntax error!)
+
+    print(f"{ch1} {ch2} {ch3}")
 
 
 if __name__ == "__main__":
