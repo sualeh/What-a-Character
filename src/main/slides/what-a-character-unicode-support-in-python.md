@@ -63,7 +63,7 @@ str2 = "A\u00EA\u00F1\u00FCC" # “AêñüC”
 - Use `\U00HHHHHH` instead
 
 ```python
-// 'DESERET CAPITAL LETTER LONG I' - 𐐀
+# Character outside the BMP
 str3 = "\U00010400"  # '𐐀'
 ```
 

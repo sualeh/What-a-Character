@@ -111,7 +111,7 @@ String str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
 - Supplementary characters are written as **surrogate pairs**
 
 ```java
-// 'DESERET CAPITAL LETTER LONG I' - 𐐀
+// Character outside the BMP
 String str3 = "\uD801\uDC00"; // ‘𐐀’
 ```
 
