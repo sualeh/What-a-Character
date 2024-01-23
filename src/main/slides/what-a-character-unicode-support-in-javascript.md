@@ -42,7 +42,7 @@ Unicode Support in JavaScript
 - JavaScript APIs allow for integer code points instead of surrogate pairs
 
 
-## JavaScript Unicode Character Literals
+## Unicode Character Literals
 
 ```javascript
 ch1 = 'a'
@@ -51,7 +51,7 @@ ch3 = '𐐀' // (Not a BMP character!)
 ```
 
 
-## JavaScript Unicode Character Literals
+## Unicode Character Literals
 
 - `\uHHHH` - where H is a case-insensitive hexadecimal character
 - Only supports the Basic Multilingual Plane
@@ -62,6 +62,21 @@ ch5 = '\u00EA'; // ‘ê’
 str1 = "a\u00ea\u00f1\u00fcc"; // “aêñüc”
 str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
 ```
+
+
+## Unicode Character Literals
+
+- Supplementary characters are written as **surrogate pairs**
+
+```javascript
+// 'DESERET CAPITAL LETTER LONG I' - 𐐀
+str3 = "\uD801\uDC00"; // ‘𐐀’
+```
+
+**Result:**
+
+length `str3.length` is 2
+code points `Array.from(str3).length)` is 1
 
 
 ## Java Unicode Code Point Literals

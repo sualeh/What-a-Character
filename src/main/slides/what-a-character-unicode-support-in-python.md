@@ -35,7 +35,7 @@ Unicode Support in Python
 ![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
 
 
-## Python Unicode Character Literals
+## Unicode Character Literals
 
 ```python
 ch1 = 'a'
@@ -45,7 +45,7 @@ ch3 = '𐐀' # (Not a BMP character!)
 Python can represent characters from the BMP or any other plane.
 
 
-## Python Unicode Character Literals
+## Unicode Character Literals
 
 - `\uHHHH` - where H is a case-insensitive hexadecimal character
 - Only supports the Basic Multilingual Plane
@@ -55,6 +55,21 @@ ch5 = "\u00EA" # ‘ê’
 str1 = "a\u00ea\u00f1\u00fcc" # “aêñüc”
 str2 = "A\u00EA\u00F1\u00FCC" # “AêñüC”
 ```
+
+
+## Unicode Character Literals
+
+- Python does not use **surrogate pairs**
+- Use `\U00HHHHHH` instead
+
+```python
+// 'DESERET CAPITAL LETTER LONG I' - 𐐀
+str3 = "\U00010400"  # '𐐀'
+```
+
+**Result:**
+
+length `len(str3)` is 1
 
 
 ## Python Unicode Code Point Literals

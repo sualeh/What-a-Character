@@ -47,6 +47,18 @@ public class UnicodeCharLiterals
     System.out.printf("%s%n%s%n%s%n", ch5, str1, str2);
 
     // ----------------------------------------
+    // Unicode notation
+    // \\uHHHH with surrogate pairs 
+    // for characters outside the BMP
+
+    String str3 = "\uD801\uDC00"; // ‘𐐀’
+
+    System.out.println(str3);
+    System.out.printf("length: %d%ncode points: %d%n",
+      str3.length(),
+      str3.codePointCount(0, str3.length()));
+
+    // ----------------------------------------
   }
 
 }

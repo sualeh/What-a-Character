@@ -79,7 +79,7 @@ So,
 - Java 5 APIs allow for `int` code points instead of surrogate pairs
 
 
-## Java Unicode Character Literals
+## Unicode Character Literals
 
 ```java
 char ch1 = 'a';
@@ -93,7 +93,7 @@ char ch3 = '𐐀'; // (Not a BMP character!)
 is a syntax error, since 'DESERET CAPITAL LETTER LONG I' - 𐐀 needs surrogate pairs.
 
 
-## Java Unicode Character Literals
+## Unicode Character Literals
 
 - `\uHHHH` - where H is a case-insensitive hexadecimal character
 - Only supports the Basic Multilingual Plane
@@ -104,6 +104,21 @@ char ch5 = '\u00EA'; // ‘ê’
 String str1 = "a\u00ea\u00f1\u00fcc"; // “aêñüc”
 String str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
 ```
+
+
+## Unicode Character Literals
+
+- Supplementary characters are written as **surrogate pairs**
+
+```java
+// 'DESERET CAPITAL LETTER LONG I' - 𐐀
+String str3 = "\uD801\uDC00"; // ‘𐐀’
+```
+
+**Result:**
+
+`str3.length()` is 2
+`str3.codePointCount()` is 1
 
 
 ## Java Unicode Code Point Literals

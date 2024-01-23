@@ -41,6 +41,16 @@ def main():
     print(f"{ch5}\n{str1}\n{str2}")
 
     # ----------------------------------------
+    # Unicode notation
+    # \U00HHHHHH  
+    # for characters outside the BMP
+
+    str3 = "\U00010400"  # '𐐀'
+
+    print(str3)
+    print(f"length: {len(str3)}")
+
+    # ----------------------------------------
 
 
 if __name__ == "__main__":

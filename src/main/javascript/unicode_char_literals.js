@@ -41,6 +41,17 @@ function main() {
     console.log(ch5 + "\n" + str1 + "\n" + str2)
 
     // ----------------------------------------
+    // Unicode notation
+    // \\uHHHH with surrogate pairs 
+    // for characters outside the BMP
+
+    str3 = "\uD801\uDC00"; // ‘𐐀’
+
+    console.log(str3);
+    console.log("length: " + str3.length);
+    console.log("code points: " + Array.from(str3).length);
+
+    // ----------------------------------------
 }
 
 main()
