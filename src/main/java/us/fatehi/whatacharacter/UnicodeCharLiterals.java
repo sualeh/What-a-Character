@@ -30,6 +30,8 @@ public class UnicodeCharLiterals
     char ch3 = '東';
     // char ch4 = '𐐀'; // (Not a BMP character!)
 
+    System.out.printf("%s %s%n", ch1, ch3);
+
   }
 
 }
