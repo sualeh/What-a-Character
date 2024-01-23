@@ -58,7 +58,7 @@ ch3 = '𐐀' // (Not a BMP character!)
 - Supplementary characters are represented as **surrogate pairs**
 
 ```javascript
-ch = '\u00EA'; // ‘ê’
+ch5 = '\u00EA'; // ‘ê’
 str1 = "a\u00ea\u00f1\u00fcc"; // “aêñüc”
 str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
 ```

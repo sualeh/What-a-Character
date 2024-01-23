@@ -30,27 +30,7 @@ def main():
     # How to use Unicode characters in and character literals
     # The hexadecimal values can be in uppercase or lowercase
     # The characters may be in any Unicode plane
-
-    # Character literals
-
-    char1 = "a"
-    print(char1)
-
-    char2 = "\u00EA"
-    print(char2)
-
-    char3 = "\\"
-    print(char3)
-
-    # \uHHHH
-    # where H is a case-insensitive hexadecimal character
-
-    str1 = "a\u00ea\u00f1\u00fcc"
-    print(str1)
-
-    str2 = "A\u00EA\u00F1\u00FCC"
-    print(str2)
-
+    
     # 'DESERET CAPITAL LETTER LONG I' - 𐐀
 
     cp1 = 0x010400      

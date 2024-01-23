@@ -100,7 +100,7 @@ is a syntax error, since 'DESERET CAPITAL LETTER LONG I' - 𐐀 needs surrogate 
 - Supplementary characters are written as **surrogate pairs**
 
 ```java
-char ch = '\u00EA'; // ‘ê’
+char ch5 = '\u00EA'; // ‘ê’
 String str1 = "a\u00ea\u00f1\u00fcc"; // “aêñüc”
 String str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
 ```

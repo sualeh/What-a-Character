@@ -33,27 +33,6 @@ public class UnicodeStringLiterals
     // The hexadecimal values can be in uppercase or lowercase
     // The characters are always in the Basic Multilingual Plane
 
-    // Character literals
-
-    char char1 = 'a';
-    System.out.println(char1);
-
-    char char2 = '\u00EA';
-    System.out.println(char2);
-
-    char char3 = '\\';
-    System.out.println(char3);
-
-    
-    // \\uHHHH
-    // where H is a case-insensitive hexadecimal character
-
-    String str1 = "a\u00ea\u00f1\u00fcc";
-    System.out.println(str1);
-
-    String str2 = "A\u00EA\u00F1\u00FCC";
-    System.out.println(str2);
-
 
     // 'DESERET CAPITAL LETTER LONG I' - 𐐀
 

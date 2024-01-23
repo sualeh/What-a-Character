@@ -25,6 +25,9 @@ public class UnicodeCharLiterals
     // The hexadecimal values can be in uppercase or lowercase
     // The characters are always in the Basic Multilingual Plane
 
+    // ----------------------------------------
+    // Character literals
+
     char ch1 = 'a';
     char ch2 = '東'; // (Not an ASCII character!)
     // char ch3 = '𐐀'; // (Not a BMP character!)
@@ -32,6 +35,18 @@ public class UnicodeCharLiterals
 
     System.out.printf("%s %s%n", ch1, ch2);
 
+    // ----------------------------------------
+    // Unicode notation
+    // \\uHHHH
+    // where H is a case-insensitive hexadecimal character
+
+    char ch5 = '\u00EA'; // ‘ê’
+    String str1 = "a\u00ea\u00f1\u00fcc"; // “aêñüc”
+    String str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
+
+    System.out.printf("%s%n%s%n%s%n", ch5, str1, str2);
+
+    // ----------------------------------------
   }
 
 }

@@ -51,7 +51,7 @@ Python can represent characters from the BMP or any other plane.
 - Only supports the Basic Multilingual Plane
 
 ```python
-char2 = "\u00EA" # ‘ê’
+ch5 = "\u00EA" # ‘ê’
 str1 = "a\u00ea\u00f1\u00fcc" # “aêñüc”
 str2 = "A\u00EA\u00F1\u00FCC" # “AêñüC”
 ```

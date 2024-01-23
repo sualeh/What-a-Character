@@ -19,11 +19,28 @@ function main() {
     // The hexadecimal values can be in uppercase or lowercase
     // The characters may be in any Unicode plane
 
+    // ----------------------------------------
+    // Character literals
+
     ch1 = 'a'
     ch2 = '東' // (Not an ASCII character!)
     ch3 = '𐐀' // (Not a BMP character!)
     // ch4 = '\' // (Backslash is a syntax error!)
+
     console.log(ch1 + " " + ch2 + " " + ch3)
+
+    // ----------------------------------------
+    // Unicode notation
+    // \\uHHHH
+    // where H is a case-insensitive hexadecimal character
+
+    ch5 = '\u00EA'; // ‘ê’
+    str1 = "a\u00ea\u00f1\u00fcc"; // “aêñüc”
+    str2 = "A\u00EA\u00F1\u00FCC"; // “AêñüC”
+
+    console.log(ch5 + "\n" + str1 + "\n" + str2)
+
+    // ----------------------------------------
 }
 
 main()
