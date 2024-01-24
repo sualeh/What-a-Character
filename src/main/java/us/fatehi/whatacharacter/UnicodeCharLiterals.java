@@ -59,6 +59,22 @@ public class UnicodeCharLiterals
       str3.codePointCount(0, str3.length()));
 
     // ----------------------------------------
+    // Code point notation
+    // 0xHHHHHH
+    // specifying code point plane and code point
+    // for characters outside the BMP
+
+    int cp1 = 0x010400; // 𐐀
+    String str4 = new StringBuffer().appendCodePoint(cp1).toString();
+    String str5 = Character.toString(cp1);
+
+    System.out.println(str4);
+    System.out.println(str5);
+    System.out.printf("length: %d%ncode points: %d%n", 
+        str4.length(),
+        str3.codePointCount(0, str4.length()));
+
+    // ----------------------------------------
   }
 
 }

@@ -121,7 +121,7 @@ String str3 = "\uD801\uDC00"; // ‘𐐀’
 `str3.codePointCount()` is 1
 
 
-## Java Unicode Code Point Literals
+## Unicode Code Point Literals
 
 - `0xHHHHHH` - where H is a case-insensitive hexadecimal character
 - Specify code plane with code point
@@ -129,20 +129,20 @@ String str3 = "\uD801\uDC00"; // ‘𐐀’
 - Not all Java APIs support `int` code points
 
 
-## Java Unicode Code Point Literals
+## Unicode Code Point Literals
 
 ```java
-// 'DESERET CAPITAL LETTER LONG I' - 𐐀
-int cp = 0x010400; 
-String str = new StringBuffer()
-                 .appendCodePoint(cp)
-                 .toString();
+// Character outside the BMP
+int cp1 = 0x010400; // 𐐀
+String str4 = new StringBuffer()
+                 .appendCodePoint(cp).toString();
+String str5 = Character.toString(cp1);
 ```
 
 **Result:**
 
-`str.length()` is 2
-`str.codePointCount()` is 1
+`str4.length()` is 2
+`str4.codePointCount()` is 1
 
 
 ## Compact Strings

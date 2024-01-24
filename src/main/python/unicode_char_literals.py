@@ -42,13 +42,26 @@ def main():
 
     # ----------------------------------------
     # Unicode notation
-    # \U00HHHHHH  
+    # \U00HHHHHH
+    # specifying code point plane and code points
     # for characters outside the BMP
 
     str3 = "\U00010400"  # '𐐀'
 
     print(str3)
     print(f"length: {len(str3)}")
+
+    # ----------------------------------------
+    # Code point notation
+    # 0xHHHHHH
+    # specifying code point plane and code point
+    # for characters outside the BMP
+
+    cp1 = 0x010400      
+    str4 = chr(cp1)       
+
+    print(str4)
+    print(f"length: {len(str4)}")
 
     # ----------------------------------------
 

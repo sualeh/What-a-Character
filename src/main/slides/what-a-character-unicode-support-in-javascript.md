@@ -79,38 +79,25 @@ length `str3.length` is 2
 code points `Array.from(str3).length)` is 1
 
 
-## Java Unicode Code Point Literals
+## Unicode Code Point Literals
 
 - `0xHHHHHH` - where H is a case-insensitive hexadecimal character
 - Specify code plane with code point
 - No surrogate pairs needed
-- Not all Java APIs support `int` code points
 
 
-## Java Unicode Code Point Literals
+## Unicode Code Point Literals
 
-```java
-// 'DESERET CAPITAL LETTER LONG I' - 𐐀
-int cp = 0x010400; 
-String str = new StringBuffer()
-                 .appendCodePoint(cp)
-                 .toString();
+```javascript
+// Character outside the BMP
+cp1 = 0x010400; // 𐐀
+str4 = String.fromCodePoint(cp1);
 ```
 
 **Result:**
 
-`str.length()` is 2
-`str.codePointCount()` is 1
-
-
-## Compact Strings
-
-- Before Java 9, strings were internally `char[]`
-- Java now represents strings internally as `byte[]`
-- External APIs are unchanged
-- Two encodings are supported internally
-  - UTF-16 uses one or two bytes per character
-  - Latin-1 uses one byte per character
+length `str4.length` is 2
+code points `Array.from(str4).length)` is 1
 
 
 ## Java and Unicode

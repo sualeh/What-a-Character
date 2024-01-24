@@ -28,35 +28,6 @@ function main() {
   // The hexadecimal values can be in uppercase or lowercase
   // The characters are always in the Basic Multilingual Plane
 
-  // Character literals
-
-  char1 = 'a';
-  console.log(char1);
-
-  char2 = '\u00EA';
-  console.log(char2);
-
-  char3 = '\\';
-  console.log(char3);
-
-
-  // \\uHHHH
-  // where H is a case-insensitive hexadecimal character
-
-  str1 = "a\u00ea\u00f1\u00fcc";
-  console.log(str1);
-
-  str2 = "A\u00EA\u00F1\u00FCC";
-  console.log(str2);
-
-
-  // 'DESERET CAPITAL LETTER LONG I' - 𐐀
-
-  cp1 = String.fromCodePoint(0x010400);
-  console.log(cp1);
-  console.log(cp1.length); // 1
-  console.log(Array.from(cp1).length);  // 2
-
 
   // Character escape sequences
 

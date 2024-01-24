@@ -30,13 +30,6 @@ def main():
     # How to use Unicode characters in and character literals
     # The hexadecimal values can be in uppercase or lowercase
     # The characters may be in any Unicode plane
-    
-    # 'DESERET CAPITAL LETTER LONG I' - 𐐀
-
-    cp1 = 0x010400      
-    string = chr(cp1)       
-    print(string)
-    print(len(string))
 
 
     # Character escape sequences

@@ -72,24 +72,25 @@ str3 = "\U00010400"  # '𐐀'
 length `len(str3)` is 1
 
 
-## Python Unicode Code Point Literals
+## Unicode Code Point Literals
 
 - `0xHHHHHH` - where H is a case-insensitive hexadecimal character
 - Specify code plane with code point
 - Supports code points in supplemental planes
 
 
-## Python Unicode Code Point Literals
+## Unicode Code Point Literals
 
 ```python
-# 'DESERET CAPITAL LETTER LONG I' - 𐐀
+# Character outside the BMP
 cp1 = 0x010400      
-string = chr(cp1)   
+str4 = chr(cp1)       
 ```
+
 
 **Result:**
 
-`len(string)` is 1
+`len(str4)` is 1
 
 
 

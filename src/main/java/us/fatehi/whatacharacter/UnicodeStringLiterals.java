@@ -33,14 +33,6 @@ public class UnicodeStringLiterals
     // The hexadecimal values can be in uppercase or lowercase
     // The characters are always in the Basic Multilingual Plane
 
-
-    // 'DESERET CAPITAL LETTER LONG I' - 𐐀
-
-    String cp1 = Character.toString(0x010400);      
-    System.out.println(cp1);
-    System.out.println(cp1.length());    
-    System.out.println(cp1.codePointCount(0, cp1.length()));
-
     // Character escape sequences
 
     printUnicode('\t');

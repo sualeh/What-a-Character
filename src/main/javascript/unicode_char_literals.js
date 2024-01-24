@@ -52,6 +52,19 @@ function main() {
     console.log("code points: " + Array.from(str3).length);
 
     // ----------------------------------------
+    // Code point notation
+    // 0xHHHHHH 
+    // specifying code point plane and code point
+    // for characters outside the BMP
+
+    cp1 = 0x010400; // 𐐀
+    str4 = String.fromCodePoint(cp1);
+
+    console.log(str4);
+    console.log("length: " + str4.length);
+    console.log("code points: " + Array.from(str4).length);
+
+    // ----------------------------------------
 }
 
 main()
