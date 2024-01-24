@@ -25,8 +25,8 @@ def main():
   greekWord = "ΣΚΎΛΟΣ" # dog
   greekLower = greekWord.toLowerCase() # "σκύλος"
 
-  print(f"lower of {greekWord} is {greekLower}");
-  print(f"length of lower {greekLower} is {greekLower.length}");
+  print(f"lower of {greekWord} is {greekLower}")
+  print(f"length of lower {greekLower} is {greekLower.length}")
 
   # ----------------------------------------
   # Uppercase
