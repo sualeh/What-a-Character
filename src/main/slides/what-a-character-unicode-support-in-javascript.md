@@ -109,9 +109,9 @@ Built-in escape sequences
 
 ## Java and Unicode
 
-```java
-String greekWord = "ΣΚΎΛΟΣ"; // dog
-String greekLower = greekWord.toLowerCase();
+```javascript
+greekWord = "ΣΚΎΛΟΣ"; // dog
+greekLower = greekWord.toLowerCase();
 ```
 
 **Result:**
@@ -121,9 +121,9 @@ String greekLower = greekWord.toLowerCase();
 
 ## Java and Unicode
 
-```java
-String germanWord = "straße"; // street
-String germanUpper = germanWord.toUpperCase();
+```javascript
+germanWord = "straße"; // street
+germanUpper = germanWord.toUpperCase();
 ```
 
 **Result:**

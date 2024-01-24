@@ -100,7 +100,7 @@ Built-in escape sequences
 ![w:700](escape-sequences.png "Escape Sequences")
 
 
-## Python and Unicode
+## Unicode Cases
 
 ```python
 greek_word = "ΣΚΎΛΟΣ"  # dog
@@ -112,7 +112,7 @@ greek_lower = greek_upper.lower()
 (Notice that the first and last letter are both sigma)
 
 
-## Python and Unicode
+## Unicode Cases
 
 ```python
 german_word = "straße"  # street

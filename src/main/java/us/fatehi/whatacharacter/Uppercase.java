@@ -41,44 +41,56 @@ public class Uppercase
     // required.
     // http://unicode.org/versions/Unicode5.1.0/
 
-    final String germanWord = "straße";
-    final String germanUpper = germanWord.toUpperCase();
-    final String germanLower = germanUpper.toLowerCase();
+    // ----------------------------------------
+    // Lower case
 
-    System.out.format("German \"street\" - \"%s\" - length %d%n",
-                      germanWord,
-                      germanWord.length());
-    System.out.format("Converted to uppercase - \"%s\" - length %d%n",
-                      germanUpper,
-                      germanUpper.length());
-    System.out.format("Converted to lowercase - \"%s\" - length %d%n",
-                      germanLower,
-                      germanLower.length());
-
-    // Break
-    System.out.println();
-
-    final String greekWord = "ΣΚΎΛΟΣ";
+    final String greekWord = "ΣΚΎΛΟΣ"; // dog
     final String greekUpper = greekWord.toUpperCase();
     final String greekLower = greekUpper.toLowerCase();
 
     System.out.format("Greek \"dog\" - \"%s\" - length %d%n",
-                      greekWord,
-                      greekWord.length());
-    System.out.format("Converted to uppercase - \"%s\"%n", greekUpper);
-    System.out.format("Converted to lowercase - \"%s\"%n", greekLower);
+      greekWord,
+      greekWord.length());
+    System.out.format("Converted to uppercase - \"%s\"%n", 
+      greekUpper);
+    System.out.format("Converted to lowercase - \"%s\"%n", 
+      greekLower);
 
     // Break
     System.out.println();
 
+
+    // ----------------------------------------
+    // Upper case
+
+    final String germanWord = "straße"; // street
+    final String germanUpper = germanWord.toUpperCase();
+    final String germanLower = germanUpper.toLowerCase();
+
+    System.out.format("German \"street\" - \"%s\" - length %d%n", 
+        germanWord, 
+        germanWord.length());
+    System.out.format("Converted to uppercase - \"%s\" - length %d%n",
+        germanUpper,
+        germanUpper.length());
+    System.out.format("Converted to lowercase - \"%s\" - length %d%n",
+        germanLower,
+        germanLower.length());
+
+    // Break
+    System.out.println();
+
+
+    // ----------------------------------------
     // Character conversions may not be done correctly
 
     final char germanChar = 'ß';
     final char germanCharUpper = Character.toUpperCase(germanChar);
     System.out.format("%s becomes %s in uppercase%n",
-                      germanChar,
-                      germanCharUpper);
+        germanChar,
+        germanCharUpper);
 
+    // ----------------------------------------
   }
 
 }

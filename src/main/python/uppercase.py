@@ -14,17 +14,10 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 
 """
 
-german_word = "straße"
-german_upper = german_word.upper()
-german_lower = german_upper.lower()
+# ----------------------------------------
+# Lower case
 
-print(f'German "street" - "{german_word}" - length {len(german_word)}')
-print(f'Converted to uppercase - "{german_upper} - length {len(german_upper)}"')
-print(f'Converted to lowercase - "{german_lower} - length {len(german_lower)}"')
-
-print()
-
-greek_word = "ΣΚΎΛΟΣ"
+greek_word = "ΣΚΎΛΟΣ" # dog
 greek_upper = greek_word.upper()
 greek_lower = greek_upper.lower()
 
@@ -34,6 +27,15 @@ print(f'Converted to lowercase - "{greek_lower}"')
 
 print()
 
-german_char = "ß"
-german_char_upper = german_char.upper()
-print(f"{german_char} becomes {german_char_upper} in uppercase")
+# ----------------------------------------
+# Upper case
+
+german_word = "straße"  # street
+german_upper = german_word.upper()
+german_lower = german_upper.lower()
+
+print(f'German "street" - "{german_word}" - length {len(german_word)}')
+print(f'Converted to uppercase - "{german_upper} - length {len(german_upper)}"')
+print(f'Converted to lowercase - "{german_lower} - length {len(german_lower)}"')
+
+print()
