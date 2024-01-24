@@ -1,19 +1,22 @@
 # What a Character
 
-Explains Unicode and character encoding to software engineers, and the pitfalls of working with international characters in Java.
+Explains Unicode and character encoding to software engineers, and the pitfalls of working with international characters in Java, JavaScript and Python.
 
 ## Slides
 
 Goes with the **What a Character** presentation slides.
 
-- **Overview**
-  - [Concepts](https://sualeh.github.io/What-a-Character/what-a-character-concepts.pdf) 
-  - [Unicode Support in Java](https://sualeh.github.io/What-a-Character/what-a-character-unicode-support-in-java.pdf)   
-  - [Unicode Support in Python](https://sualeh.github.io/What-a-Character/what-a-character-unicode-support-in-python.pdf) 
+- **Overview**  
+  Goes over concepts of character identification and Unicode.
+  - [Concepts](https://sualeh.github.io/What-a-Character/part1/what-a-character-concepts.pdf) 
+  - [Unicode Support in Java](https://sualeh.github.io/What-a-Character/part1/what-a-character-unicode-support-in-java.pdf)  
+  - [Unicode Support in JavaScript](https://sualeh.github.io/What-a-Character/part1/what-a-character-unicode-support-in-javascript.pdf)   
+  - [Unicode Support in Python](https://sualeh.github.io/What-a-Character/part1/what-a-character-unicode-support-in-python.pdf) 
 - **Encoding**
-  - [Encoding Concepts](https://sualeh.github.io/What-a-Character/what-a-character-encoding.pdf) 
-  - [Java Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-java.pdf) 
-  - [Python Encoding Examples](https://sualeh.github.io/What-a-Character/what-a-character-encoding-python.pdf) 
+  - [Encoding Concepts](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding.pdf) 
+  - [Java Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-java.pdf) 
+  - [JavaScript Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-javascript.pdf) 
+  - [Python Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-python.pdf) 
 
 
 ## Video
@@ -22,7 +25,7 @@ Video presentation of the [What a Character](https://vimeo.com/743222944) conten
 
 ## Code
 
-Code snippets for testing and understanding Java support for Unicode. For additional code, please see [utf8db2](https://github.com/sualeh/utf8db2). 
+Code snippets for testing and understanding Java, JavaScript and Python support for Unicode. For additional code, please see [utf8db2](https://github.com/sualeh/utf8db2). 
 
 ## References
 

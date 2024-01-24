@@ -32,7 +32,7 @@ Unicode Support in Python
 
 ## Unicode with Python
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 ## Unicode Character Literals
@@ -201,5 +201,5 @@ matches = bool(match_result)
 Slides and all code examples are on GitHub
 [https://github.com/**sualeh/What-a-Character**](https://github.com/sualeh/What-a-Character)
 
-![width:300](qr-code.png "QR Code")
+![width:300](../common/qr-code.png "QR Code")
 
