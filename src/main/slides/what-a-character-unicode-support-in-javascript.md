@@ -100,6 +100,13 @@ length `str4.length` is 2
 code points `Array.from(str4).length)` is 1
 
 
+## Escape Sequences
+
+Built-in escape sequences
+
+![w:700](escape-sequences.png "Escape Sequences")
+
+
 ## Java and Unicode
 
 ```java

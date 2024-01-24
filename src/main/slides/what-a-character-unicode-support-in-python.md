@@ -93,6 +93,12 @@ str4 = chr(cp1)
 `len(str4)` is 1
 
 
+## Escape Sequences
+
+Built-in escape sequences
+
+![w:700](escape-sequences.png "Escape Sequences")
+
 
 ## Python and Unicode
 

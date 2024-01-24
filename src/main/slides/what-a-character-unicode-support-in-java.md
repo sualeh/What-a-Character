@@ -145,6 +145,13 @@ String str5 = Character.toString(cp1);
 `str4.codePointCount()` is 1
 
 
+## Escape Sequences
+
+Built-in escape sequences
+
+![w:700](escape-sequences.png "Escape Sequences")
+
+
 ## Compact Strings
 
 - Before Java 9, strings were internally `char[]`
@@ -155,7 +162,7 @@ String str5 = Character.toString(cp1);
   - Latin-1 uses one byte per character
 
 
-## Java and Unicode
+## Unicode Cases
 
 ```java
 String greekWord = "ΣΚΎΛΟΣ"; // dog
@@ -167,7 +174,7 @@ String greekLower = greekWord.toLowerCase();
 (Notice that the first and last letter are both sigma)
 
 
-## Java and Unicode
+## Unicode Cases
 
 ```java
 String germanWord = "straße"; // street
