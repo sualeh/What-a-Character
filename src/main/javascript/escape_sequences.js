@@ -24,10 +24,6 @@ function toUnicode(ch) {
 }
 
 function main() {
-  // How to use Unicode characters in string and character literals
-  // The hexadecimal values can be in uppercase or lowercase
-  // The characters are always in the Basic Multilingual Plane
-
 
   // Character escape sequences
 

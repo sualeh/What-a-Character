@@ -16,7 +16,7 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 package us.fatehi.whatacharacter;
 
 
-public class UnicodeStringLiterals
+public class EscapeSequences
 {
 
   private static void printUnicode(char ch) {
@@ -29,9 +29,6 @@ public class UnicodeStringLiterals
 
   public static void main(String[] args)
   {
-    // How to use Unicode characters in string and character literals
-    // The hexadecimal values can be in uppercase or lowercase
-    // The characters are always in the Basic Multilingual Plane
 
     // Character escape sequences
 

@@ -15,9 +15,6 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 """
 
 
-from lib2to3.pgen2 import literals
-
-
 def print_unicode(ch):
     print(to_unicode(ch))
 
@@ -27,11 +24,7 @@ def to_unicode(ch):
 
 
 def main():
-    # How to use Unicode characters in and character literals
-    # The hexadecimal values can be in uppercase or lowercase
-    # The characters may be in any Unicode plane
-
-
+    
     # Character escape sequences
 
     print_unicode("\t")
