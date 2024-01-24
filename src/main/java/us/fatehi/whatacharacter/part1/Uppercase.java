@@ -23,23 +23,8 @@ public class Uppercase
   {
 
     // Uppercasing or lowercasing a character may result in more than
-    // one character
-    // Also, depending on the position of a character in
-    // a word, you can get a different uppercase or lowercase character
-
-    // Official Unicode 5.1 Announcement
-    // U+1E9E LATIN CAPITAL LETTER SHARP S
-    // In particular, capital sharp s is intended for typographical
-    // representations of signage and uppercase titles, and other
-    // environments where users require the sharp s to be preserved in
-    // uppercase. Overall, such usage is rare. In contrast, standard
-    // German orthography uses the string "SS" as uppercase mapping for
-    // small sharp s. Thus, with the default Unicode casing operations,
-    // capital sharp s will lowercase to small sharp s, but not the reverse:
-    // small sharp s uppercases to "SS". In those instances where the
-    // reverse casing operation is needed, a tailored operation would be
-    // required.
-    // http://unicode.org/versions/Unicode5.1.0/
+    // one character. Also, depending on the position of a character in
+    // a word, you can get a different uppercase or lowercase character.
 
     // ----------------------------------------
     // Lower case
@@ -62,6 +47,20 @@ public class Uppercase
 
     // ----------------------------------------
     // Upper case
+
+    // Official Unicode 5.1 Announcement
+    // U+1E9E LATIN CAPITAL LETTER SHARP S
+    // In particular, capital sharp s is intended for typographical
+    // representations of signage and uppercase titles, and other
+    // environments where users require the sharp s to be preserved in
+    // uppercase. Overall, such usage is rare. In contrast, standard
+    // German orthography uses the string "SS" as uppercase mapping for
+    // small sharp s. Thus, with the default Unicode casing operations,
+    // capital sharp s will lowercase to small sharp s, but not the reverse:
+    // small sharp s uppercases to "SS". In those instances where the
+    // reverse casing operation is needed, a tailored operation would be
+    // required.
+    // http://unicode.org/versions/Unicode5.1.0/
 
     final String germanWord = "straße"; // street
     final String germanUpper = germanWord.toUpperCase();
