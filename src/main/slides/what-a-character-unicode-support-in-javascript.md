@@ -107,7 +107,7 @@ Built-in escape sequences
 ![w:700](escape-sequences.png "Escape Sequences")
 
 
-## Java and Unicode
+## Unicode Cases
 
 ```javascript
 greekWord = "ΣΚΎΛΟΣ"; // dog
@@ -119,7 +119,7 @@ greekLower = greekWord.toLowerCase();
 (Notice that the first and last letter are both sigma)
 
 
-## Java and Unicode
+## Unicode Cases
 
 ```javascript
 germanWord = "straße"; // street
