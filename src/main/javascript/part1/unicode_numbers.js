@@ -13,22 +13,25 @@ This work is licensed under the Creative Commons Attribution-ShareAlike
 http://creativecommons.org/licenses/by-sa/4.0/.
 
 */
-package us.fatehi.whatacharacter;
 
+function main() {
 
-public class ConvertUnicodeNumbers
-{
+  // Demonstrates number parsing functions can 
+  // handle numeric values from other (non-English) 
+  // languages.
 
-  public static void main(String[] args)
-  {
+  // ----------------------------------------
+  // Handle Unicode numbers
 
-    // Demonstrates number parsing functions can handle numeric values from
-    // other (non-English) languages
+  hindiNumber = "१२३४५६७८९०";
+  number = parseInt(hindiNumber);
 
-    final String hindiNumber = "१२३४५६७८९०";
-    final int number = Integer.parseInt(hindiNumber);
-    System.out.printf("%s = %d%n", hindiNumber, number);
+  // NOTE: Parsing numeric values from other languages
+  // DOES NOT work.
+  console.log(`${hindiNumber} = ${number}`);
 
-  }
-
+  // ----------------------------------------
 }
+
+main();
+

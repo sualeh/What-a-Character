@@ -131,18 +131,6 @@ germanUpper = germanWord.toUpperCase();
 (Notice that the string lengths are different)
 
 
-## Java Integer Parsing
-
-```java
-String hindiNumber = "१२३४५६७८९०";
-int number = Integer.parseInt(hindiNumber);
-```
-
-**Result:**
-
-`number` is 1234567890
-
-
 ## Java Regular Expressions
 
 ```java
