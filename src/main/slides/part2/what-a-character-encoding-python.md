@@ -35,7 +35,7 @@ Encoding in Python
 
 See the [presentation on encoding concepts](https://sualeh.github.io/What-a-Character/what-a-character-encoding.pdf) .
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 
@@ -90,5 +90,5 @@ with open("test.txt", "w", encoding="utf-8") as writer:
 Slides and all code examples are on GitHub
 [https://github.com/**sualeh/What-a-Character**](https://github.com/sualeh/What-a-Character)
 
-![width:300](qr-code.png "QR Code")
+![width:300](../common/qr-code.png "QR Code")
 

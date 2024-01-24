@@ -32,7 +32,7 @@ Unicode Support in Java
 
 ## Unicode with Java
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 ## Java Support For Unicode
@@ -51,7 +51,7 @@ Unicode Support in Java
 
 ## What is a Java `char`?
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 ## What is a Java `char`?
@@ -328,5 +328,5 @@ U+0308 is a 'COMBINING DIAERESIS', or ◌̈
 Slides and all code examples are on GitHub
 [https://github.com/**sualeh/What-a-Character**](https://github.com/sualeh/What-a-Character)
 
-![width:300](qr-code.png "QR Code")
+![width:300](../common/qr-code.png "QR Code")
 

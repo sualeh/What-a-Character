@@ -59,7 +59,7 @@ by Pieter Bruegel the Elder (1563)
 
 We will deal mainly with the written form of language, or scripts, in this discussion...
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 ## Characters and Glyphs
@@ -94,7 +94,7 @@ Precomposed characters may need to be normalized into combining characters for s
 
 Let us assume that an expert committee has figured out what a character is, and continue with the discussion...
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 ## Character Sets
@@ -117,7 +117,7 @@ Let us assume that an expert committee has figured out what a character is, and 
 - A given character can have a different code point in different coded character sets or code pages
 - Not all characters in a language may be coded
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 ## The Solution
@@ -185,13 +185,15 @@ Let us assume that an expert committee has figured out what a character is, and 
 
 ## Code Planes
 
-![width:600](code-planes.png "Code planes")
+![width:700](code-planes.png "Code planes")
+
 
 ## Usage Heat Map
 
 ![width:1000px](usage-heat-map.jpg "Usage Heat Map")
 
 Created by Nathan Reed from a large sample of text from Wikipedia and Twitter shows usage of first three planes.
+
 
 ## Referencing a Unicode Code Point
 
@@ -210,7 +212,7 @@ U+0058 or U+000058
 
 From the _first_ Unicode standard
 
-![bg right opacity:.5](rosetta-stone.jpg "Rosetta Stone")
+![bg right opacity:.5](../common/rosetta-stone.jpg "Rosetta Stone")
 
 
 ## Surrogate Pairs
@@ -242,5 +244,5 @@ Unicode 15.0 added new scripts, and additional emojis. Unicode 15.1.0 adds new c
 Slides and all code examples are on GitHub
 [https://github.com/**sualeh/What-a-Character**](https://github.com/sualeh/What-a-Character)
 
-![width:300](qr-code.png "QR Code")
+![width:300](../common/qr-code.png "QR Code")
 
