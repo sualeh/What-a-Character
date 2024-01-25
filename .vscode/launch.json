@@ -18,10 +18,7 @@
             "type": "node",
             "request": "launch",
             "program": "${file}",
-            "stopOnEntry": true,
-            "args": [ ],
             "cwd": "${fileDirname}",
-            "runtimeExecutable": null,
             "runtimeArgs": [
                 "--nolazy"
             ],
