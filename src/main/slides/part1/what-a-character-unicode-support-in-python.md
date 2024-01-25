@@ -124,7 +124,7 @@ german_upper = german_word.upper()
 (Notice that the string lengths are different)
 
 
-## Python Integer Parsing
+## Unicode Integer Parsing
 
 ```python
 hindi_number = "१२३४५६७८९०"
@@ -136,14 +136,14 @@ number = int(hindi_number)
 `number` is 1234567890
 
 
-## Python Regular Expressions
+## Patterns for Unicode Numbers
 
 ```python
 import re
 
 hindi_number = "१२३४५६७८९०"
 
-digit_regex = r"[0-9]*"
+digit_regex = r"[0-9]+"
 match_result = re.match(digit_regex, hindi_number)
 matches = bool(match_result)
 ```
@@ -152,36 +152,41 @@ matches = bool(match_result)
 Regex does not match a string of Unicode numbers
 
 
-## Python Regular Expressions
+## Patterns for Unicode Numbers
 
 ```python
 import re
 
 hindi_number = "१२३४५६७८९०"
 
-digit_regex = r"\d*"
+digit_regex = r"\d+"
 match_result = re.match(digit_regex, hindi_number)
 matches = bool(match_result)
 ```
 
 **Result:**
-"\d" matches a digit in any language
+`r"\d+"` matches a digit in any language
 
 
-## Python Regular Expressions
+## Patterns for Unicode Numbers
 
 ```python
 import regex
 
 hindi_number = "१२३४५६७८९०"
 
-digit_regex = r"\p{Nd}*"
+digit_regex = r"\p{Nd}+"
 match_result = regex.match(digit_regex, hindi_number)
 matches = bool(match_result)
 ```
 
 **Result:**
 Use `regex` to match Unicode character classes
+
+
+## Patterns for Unicode Categories
+
+Python supports pattern matching on Unicode character properties using the "\p{}" syntax with the `regex` module.
 
 
 ## Python Patterns

@@ -186,7 +186,7 @@ String germanUpper = germanWord.toUpperCase();
 (Notice that the string lengths are different)
 
 
-## Java Integer Parsing
+## Unicode Integer Parsing
 
 ```java
 String hindiNumber = "१२३४५६७८९०";
@@ -198,18 +198,23 @@ int number = Integer.parseInt(hindiNumber);
 `number` is 1234567890
 
 
-## Java Regular Expressions
+## Patterns for Unicode Numbers
 
 ```java
 String hindiNumber = "१२३४५६७८९०";
-Pattern.compile("[0-9]*") // bad match
+Pattern.compile("[0-9]+") // bad match
        .matcher(hindiNumber).matches();
-Pattern.compile("\\p{Nd}*") // good match
+Pattern.compile("\\p{Nd}+") // good match
        .matcher(hindiNumber).matches();
 ```
 
 **Result:**
-First match is false but second match is true
+First match is `false` but second match is `true`
+
+
+## Patterns for Unicode Categories
+
+In general, Java supports pattern matching on Unicode character properties using the "\p{}" syntax.
 
 
 ## Java Patterns
