@@ -184,17 +184,15 @@ Matches on patterns with Unicode character properties
 JavaScript supports pattern matching on Unicode character properties using the "\p{}" syntax.
 
 
-## Java Patterns
+## Case Insensitive Patterns
 
-```java
-Pattern pattern = Pattern.compile("σκύλος",
-    Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-
-pattern.matcher("ΣΚΎΛΟΣ").matches();
+```javascript
+pattern = /σκύλος/iu
+matches = pattern.test("ΣΚΎΛΟΣ");
 ```
 
 **Result:**
-Match is true
+`matches` is true
 
 
 ## Use the Character Class

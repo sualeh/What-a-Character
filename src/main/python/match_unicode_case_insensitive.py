@@ -23,6 +23,9 @@ def main():
     # Demonstrates how to use regular expressions that can match
     # Unicode characters in a case-insensitive fashion
 
+    # ----------------------------------------
+    # Case insensitive patterns
+
     lower_greek = "σκύλος"
     upper_greek = "ΣΚΎΛΟΣ"
     pattern_greek = re.compile(lower_greek, re.IGNORECASE)
@@ -30,6 +33,9 @@ def main():
     print(
         f"Unicode case-insensitive match for Greek words {lower_greek} = {upper_greek} is {matches}"
     )
+
+    # ----------------------------------------
+    # Failed match for multiple characters
 
     # When a lower-case character results in more than one uppercase character,
     # there is no match
@@ -40,6 +46,8 @@ def main():
     print(
         f"Unicode case-insensitive match for German word {lower_german} = {upper_german} is {matches}"
     )
+
+    # ----------------------------------------
 
 
 if __name__ == "__main__":

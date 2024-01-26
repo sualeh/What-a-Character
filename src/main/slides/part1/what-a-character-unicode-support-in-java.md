@@ -229,17 +229,17 @@ Matches on patterns with Unicode character properties
 Java supports pattern matching on Unicode character properties using the "\p{}" syntax.
 
 
-## Java Patterns
+## Case Insensitive Patterns
 
 ```java
 Pattern pattern = Pattern.compile("σκύλος",
     Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 
-pattern.matcher("ΣΚΎΛΟΣ").matches();
+matches = pattern.matcher("ΣΚΎΛΟΣ").matches();
 ```
 
 **Result:**
-Match is true
+`matches` is true
 
 
 ## Use the Character Class

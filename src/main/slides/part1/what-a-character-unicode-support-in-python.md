@@ -189,7 +189,7 @@ Use `regex` to match Unicode character classes
 Python supports pattern matching on Unicode character properties using the "\p{}" syntax with the `regex` module.
 
 
-## Python Patterns
+## Case Insensitive Patterns
 
 ```python
 import re
