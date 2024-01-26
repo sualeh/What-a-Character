@@ -22,13 +22,13 @@ Explains Unicode and character encoding to software engineers, and the pitfalls 
   Goes over how to encode international text when reading and writing files, and what programmers need to be careful about in order not to get garbled data.
   - [Encoding Concepts](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding.pdf)
   - _Java_
-    - [Java Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-java.pdf)
+    - [Character Encoding with Java](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-java.pdf)
     - [Java Encoding Code Examples](https://github.com/sualeh/What-a-Character/tree/main/src/main/java/us/fatehi/whatacharacter/part2)
   - _JavaScript_
-    - [JavaScript Encoding Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-javascript.pdf)
+    - [Character Encoding with JavaScript](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-javascript.pdf)
     - [JavaScript Code Examples](https://github.com/sualeh/What-a-Character/tree/main/src/main/javascript/part2)
   - _Python_
-    - [Python Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-python.pdf)
+    - [Character Encoding with Python](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-python.pdf)
     - [Python Encoding Code Examples](https://github.com/sualeh/What-a-Character/tree/main/src/main/python/part2)
   - _Databases_
     - [Encoding in Databases](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-databases.pdf)
