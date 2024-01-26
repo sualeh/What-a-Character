@@ -17,6 +17,7 @@ Goes with the **What a Character** presentation slides.
   - [Java Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-java.pdf) 
   - [JavaScript Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-javascript.pdf) 
   - [Python Encoding Examples](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-python.pdf) 
+  - [Encoding in Databases](https://sualeh.github.io/What-a-Character/part2/what-a-character-encoding-databases.pdf) 
 
 
 ## Video

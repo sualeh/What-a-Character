@@ -85,12 +85,6 @@ with open("test.txt", "w", encoding="utf-8") as writer:
 You may not always get errors - just garbled data.
 
 
-## String Data in Databases
-
-- `VARCHAR` and `CHAR` specify lengths in bytes, by default
-- `NVARCHAR` and `NCHAR` specify lengths in characters, but average to a certain multiplier for bytes
-
-
 ## Code Examples
 
 Slides and all code examples are on GitHub

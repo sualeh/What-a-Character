@@ -103,12 +103,6 @@ Writer wtr = new OutputStreamWriter(fos, "UTF-8");
 You may not always get errors - just garbled data.
 
 
-## String Data in Databases
-
-- `VARCHAR` and `CHAR` specify lengths in bytes, by default
-- `NVARCHAR` and `NCHAR` specify lengths in characters, but average to a certain multiplier for bytes
-
-
 ## Where Do You Truncate?
 
 How and where do you truncate string “Aß東𐐀”? 
