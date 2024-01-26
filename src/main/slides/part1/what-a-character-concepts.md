@@ -109,7 +109,7 @@ Let us assume that an expert committee has figured out what a character is, and 
 - **ASCII** - code page of 128 code points, encoded with 7 bits
 - **Latin-1** or **ISO-8859-1** - code page of 256 code points, retaining ASCII code points, plus Western European languages
 - **ISO-8859-n** - many code pages of 256 code points, retaining ASCII code points, plus other European languages such as Greek
-- **EBCDIC** - many code pages of 256 code points each, with no connection to ASCII code points
+- **EBCDIC** - many code pages of 256 code points, with no connection to ASCII code points
 
 
 ## The Problem

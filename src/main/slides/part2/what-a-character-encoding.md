@@ -68,6 +68,17 @@ Encoding specifies conversion of characters to bytes
 ![width:1150](utf-16.png "UTF-16 Encoding")
 
 
+## UTF-16 Encoding
+
+- **High surrogates** (two bytes) start with bits   
+  **110110** (0xD800)
+- **Low surrogates** (two bytes) start with bits   
+  **110111** (0xDC00)
+- Other bits encode the the supplementary plane and code point
+
+(See previous slide)
+
+
 ## UTF-8
 
 - Most common encoding today
@@ -82,9 +93,30 @@ Encoding specifies conversion of characters to bytes
 ![width:1150](utf-8.png "UTF-8 Encoding")
 
 
+## UTF-8 Encoding
+
+- **0** first bit signifies 7-bit ASCII character
+- **110** leading bits signify 1 continuation byte
+- **1110** leading bits signify 2 continuation bytes
+- **11110** leading bits signify 3 continuation bytes
+- **10** leading bits signify the continuation byte
+
+(See previous slide)
+
+
 ## Encoding Details
 
 ![width:1150](encodings.png "Encoding Details")
+
+
+## Base64 Encoding
+
+- Base64 is a binary-to-text encoding scheme
+- Base64 does not encode characters or code points
+- Encoded text is in "printable" ASCII characters 
+
+On the other hand,
+- Unicode encoding schemes encode text-to-binary 
 
 
 ## Code Examples
