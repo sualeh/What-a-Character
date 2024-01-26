@@ -13,7 +13,7 @@ This work is licensed under the Creative Commons Attribution-ShareAlike
 http://creativecommons.org/licenses/by-sa/4.0/.
 
 */
-package us.fatehi.whatacharacter;
+package us.fatehi.whatacharacter.other;
 
 
 import java.util.Properties;
