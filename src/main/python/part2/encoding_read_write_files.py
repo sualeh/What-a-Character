@@ -16,15 +16,31 @@ http://creativecommons.org/licenses/by-sa/4.0/.
 
 
 def main():
+
+    # ------------------------------------------------------------
+    # Write a file
+
     string: str = "Aß東𐐀"
 
     # Create a StreamWriter object
     with open("test.txt", "w", encoding="utf-8") as writer:
         writer.write(string)
 
+    # ------------------------------------------------------------
+    # Read a file
+
     # Create a StreamReader object
     with open("test.txt", "r", encoding="utf-8") as reader:
         print(reader.read())
+
+    # ------------------------------------------------------------
+    # Read a file
+
+    # Create a StreamReader object
+    with open("test.txt", "r", encoding="utf-16le") as reader:
+        print(reader.read())
+
+    # ------------------------------------------------------------
 
 
 if __name__ == "__main__":

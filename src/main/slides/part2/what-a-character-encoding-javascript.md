@@ -40,11 +40,11 @@ See the [presentation on encoding concepts](https://sualeh.github.io/What-a-Char
 
 
 
-## `codecs` Module
+## `TextEncoder` and `TextDecoder`
 
-- Provides functions for encoding and decoding
-- Supports a wide variety of encodings
-- Provides classes for reading and writing data with a specific encoding
+- Provide functions for encoding and decoding
+- Supports a variety of encodings to decode
+- Encodes only to UTF-8
 - Handles encoding and decoding errors
 
 
@@ -52,20 +52,23 @@ See the [presentation on encoding concepts](https://sualeh.github.io/What-a-Char
 
 - Always specify encoding to avoid cross-platform surprises
 
-```python
-original: str = ...
-utf8_bytes = codecs.encode(original, "utf-8")
-round_trip = codecs.decode(utf8_bytes, "utf-8")
+```javascript
+original = ...
+utf8Bytes = new TextEncoder().encode(original);
+roundTrip = new TextDecoder("utf-8").decode(utf8Bytes);
 ```
 
 
 ## Reading Unicode
 
-Specify `encoding` when opening a file.
+Specify encoding when opening a file.
 
-```python
-with open("test.txt", "r", encoding="utf-8") as reader:
-    print(reader.read())
+```javascript
+const fs = require('fs');
+fs.readFile('test.txt', 'utf-8', function (err, data) {
+  // Ignore errors, print what was read
+  console.log(data);
+});
 ```
 
 
@@ -73,9 +76,11 @@ with open("test.txt", "r", encoding="utf-8") as reader:
 
 Specify `encoding` when opening a file.
 
-```python
-with open("test.txt", "w", encoding="utf-8") as writer:
-    writer.write(string)
+```javascript
+const fs = require('fs');
+fs.writeFile('test.txt', string, 'utf-8', function (err) {
+  // Ignore errors, write `string`
+});
 ```
 
 

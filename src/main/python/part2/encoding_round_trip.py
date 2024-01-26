@@ -18,10 +18,29 @@ import codecs
 
 
 def main():
-    original: str = "Some string Aß東𐐀"
+
+    # ------------------------------------------------------------
+    # Encoding round trip
+
+    original: str = "Aß東𐐀"
+
     utf8_bytes: bytes = codecs.encode(original, "utf-8")
     round_trip: str = codecs.decode(utf8_bytes, "utf-8")
+
     print(round_trip)
+
+    # ------------------------------------------------------------
+    # Encoding errors (none?)
+
+    original: str = "Aß東𐐀"
+
+    utf8_bytes: bytes = codecs.encode(original, "utf-8")
+    round_trip: str = codecs.decode(utf8_bytes, "utf-16")
+
+    # NOTE: No encoding errors are reported!
+    print(round_trip)
+
+    # ------------------------------------------------------------
 
 
 if __name__ == "__main__":

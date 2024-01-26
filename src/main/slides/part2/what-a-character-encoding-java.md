@@ -69,6 +69,7 @@ String roundTrip = new String(utf8Bytes, "UTF-8");
 // and remember to handle encoding exceptions
 ```
 
+
 ## Streams and Readers
 
 - **Streams** read and write bytes
@@ -94,6 +95,12 @@ Reader rdr = new InputStreamReader(fis, "UTF-8");
 OutputStream fos = new FileOutputStream("out.txt");
 Writer wtr = new OutputStreamWriter(fos, "UTF-8");
 ```
+
+
+## Explicitly Specify Encoding 
+
+**Always explicitly specify encoding to avoid cross-platform surprises.**
+You may not always get errors - just garbled data.
 
 
 ## String Data in Databases

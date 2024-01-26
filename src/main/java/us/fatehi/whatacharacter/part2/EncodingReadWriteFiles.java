@@ -13,7 +13,7 @@ This work is licensed under the Creative Commons Attribution-ShareAlike
 http://creativecommons.org/licenses/by-sa/4.0/.
 
 */
-package us.fatehi.whatacharacter;
+package us.fatehi.whatacharacter.part2;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -28,6 +28,11 @@ import java.io.Writer;
 public class EncodingReadWriteFiles {
 
   public static void main(final String[] args) throws Exception {
+
+
+    // ------------------------------------------------------------
+    // Write a file
+
     final String original = "Aß東𐐀";
 
     final OutputStream fos = new FileOutputStream("test.txt");
@@ -35,13 +40,29 @@ public class EncodingReadWriteFiles {
     wtr.write(original);
     wtr.close();
 
-    final InputStream fis = new FileInputStream("test.txt");
-    final Reader rdr = new InputStreamReader(fis, "UTF-8");
-    final BufferedReader brdr = new BufferedReader(rdr);
-    final String text = brdr.readLine();
+    // ------------------------------------------------------------
+    // Read a file
+
+    InputStream fis = new FileInputStream("test.txt");
+    Reader rdr = new InputStreamReader(fis, "UTF-8");
+    BufferedReader brdr = new BufferedReader(rdr);
+    String text = brdr.readLine();
     brdr.close();
 
     System.out.println(text);
+
+    // ------------------------------------------------------------
+    // Read a file
+
+    fis = new FileInputStream("test.txt");
+    rdr = new InputStreamReader(fis, "UTF-16");
+    brdr = new BufferedReader(rdr);
+    text = brdr.readLine();
+    brdr.close();
+
+    System.out.println(text);
+
+    // ------------------------------------------------------------
   }
 
 }
