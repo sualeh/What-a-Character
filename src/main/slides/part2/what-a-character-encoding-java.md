@@ -39,6 +39,16 @@ See the [presentation on encoding concepts](https://sualeh.github.io/What-a-Char
 
 
 
+## Compact Strings
+
+- Before Java 9, strings were internally `char[]`
+- Java now represents strings internally as `byte[]`
+- External APIs are unchanged
+- Two encodings are supported internally
+  - UTF-16 uses one or two bytes per character
+  - Latin-1 uses one byte per character
+
+
 ## Charset
 
 - Numerous character-encoding schemes supported via the `Charset` class

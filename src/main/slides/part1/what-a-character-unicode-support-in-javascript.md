@@ -131,18 +131,57 @@ germanUpper = germanWord.toUpperCase();
 (Notice that the string lengths are different)
 
 
-## Java Regular Expressions
+## Unicode Integer Parsing
 
-```java
-String hindiNumber = "१२३४५६७८९०";
-Pattern.compile("[0-9]*") // bad match
-       .matcher(hindiNumber).matches();
-Pattern.compile("\\p{Nd}*") // good match
-       .matcher(hindiNumber).matches();
+```javascript
+hindiNumber = "१२३४५६७८९०";
+number = parseInt(hindiNumber);
 ```
 
 **Result:**
-First match is false but second match is true
+
+`number` is 1234567890
+
+
+## Patterns for Unicode Numbers
+
+```javascript
+hindiNumber = "१२३४५६७८९०";
+digit = /[0-9]+/
+matches = digit.test(hindiNumber)
+```
+
+**Result:**
+Regex does not match a string of Unicode numbers
+
+
+## Patterns for Unicode Numbers
+
+```javascript
+hindiNumber = "१२३४५६७८९०";
+standard_digit = /\d+/
+matches = standard_digit.test(hindiNumber)
+```
+
+**Result:**
+Regex does not match a string of Unicode numbers
+
+
+## Patterns for Unicode Numbers
+
+```javascript
+hindiNumber = "१२३४५६७८९०";
+unicode_digit = /\p{Nd}+/u
+matches = unicode_digit.test(hindiNumber)
+```
+
+**Result:**
+Matches on patterns with Unicode character properties
+
+
+## Patterns for Unicode Categories
+
+JavaScript supports pattern matching on Unicode character properties using the "\p{}" syntax.
 
 
 ## Java Patterns

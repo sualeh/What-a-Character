@@ -97,7 +97,7 @@ is a syntax error, since 'DESERET CAPITAL LETTER LONG I' - 𐐀 needs surrogate 
 
 - `\uHHHH` - where H is a case-insensitive hexadecimal character
 - Only supports the Basic Multilingual Plane
-- Supplementary characters are written as **surrogate pairs**
+- Supplementary characters are represented as **surrogate pairs**
 
 ```java
 char ch5 = '\u00EA'; // ‘ê’
@@ -152,16 +152,6 @@ Built-in escape sequences
 ![w:700](escape-sequences.png "Escape Sequences")
 
 
-## Compact Strings
-
-- Before Java 9, strings were internally `char[]`
-- Java now represents strings internally as `byte[]`
-- External APIs are unchanged
-- Two encodings are supported internally
-  - UTF-16 uses one or two bytes per character
-  - Latin-1 uses one byte per character
-
-
 ## Unicode Cases
 
 ```java
@@ -202,19 +192,41 @@ int number = Integer.parseInt(hindiNumber);
 
 ```java
 String hindiNumber = "१२३४५६७८९०";
-Pattern.compile("[0-9]+") // bad match
-       .matcher(hindiNumber).matches();
-Pattern.compile("\\p{Nd}+") // good match
+Pattern.compile("[0-9]+")
        .matcher(hindiNumber).matches();
 ```
 
 **Result:**
-First match is `false` but second match is `true`
+Regex does not match a string of Unicode numbers
+
+
+## Patterns for Unicode Numbers
+
+```java
+String hindiNumber = "१२३४५६७८९०";
+Pattern.compile("\\d+")
+       .matcher(hindiNumber).matches();
+```
+
+**Result:**
+Regex does not match a string of Unicode numbers
+
+
+## Patterns for Unicode Numbers
+
+```java
+String hindiNumber = "१२३४५६७८९०";
+Pattern.compile("\\p{Nd}+")
+       .matcher(hindiNumber).matches();
+```
+
+**Result:**
+Matches on patterns with Unicode character properties
 
 
 ## Patterns for Unicode Categories
 
-In general, Java supports pattern matching on Unicode character properties using the "\p{}" syntax.
+Java supports pattern matching on Unicode character properties using the "\p{}" syntax.
 
 
 ## Java Patterns
