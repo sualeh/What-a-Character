@@ -2,6 +2,8 @@
 
 Explains Unicode and character encoding to software engineers, and the pitfalls of working with international characters in Java, JavaScript and Python.
 
+> **:star: Star it :arrow_heading_up: if you love it!**
+
 ## Slides and Code
 
 - **Overview**  
